@@ -1,0 +1,39 @@
+/* =========================================================
+   7. CATÁLOGO DE PRODUCTOS (FILTROS)
+   ========================================================= */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 30px auto 10px;
+}
+.filtro-btn {
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: 2px solid var(--verde);
+  background: var(--blanco);
+  color: var(--verde);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.filtro-btn:hover,
+.filtro-btn.activo {
+  background: var(--verde);
+  color: var(--blanco);
+}
+.producto {
+  padding: 22px;
+  text-align: center;
+}
+.producto .icono-grande { font-size: 2.2rem; margin-bottom: 10px; }
+.producto span.etiqueta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: .75rem;
+  background: var(--gris-claro);
+  color: var(--gris);
+  padding: 3px 10px;
+  border-radius: 12px;
+}

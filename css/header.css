@@ -1,0 +1,80 @@
+/* =========================================================
+   3. CABECERA, MENÚ Y LOGOTIPO (HEADER)
+   ========================================================= */
+.encabezado {
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.barra-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--verde);
+}
+.logo .icono { font-size: 1.5rem; }
+
+/* Íconos vectoriales SVG */
+.icono-svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo .icono-svg { width: 28px; height: 28px; color: var(--verde); }
+.tarjeta .icono-svg,
+.producto .icono-svg,
+.valor .icono-svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  color: var(--verde);
+}
+.tarjeta-servicio .icono-svg { color: var(--ambar); }
+.tarjeta-servicio:nth-child(1) .icono-svg,
+.tarjeta-servicio:nth-child(3) .icono-svg { color: var(--verde); }
+
+/* Menú de navegación */
+.menu-check { display: none; }
+.menu-boton {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu-boton span {
+  width: 26px;
+  height: 3px;
+  background: var(--verde);
+  border-radius: 2px;
+}
+.menu-principal { display: flex; gap: 28px; }
+.menu-principal a {
+  font-weight: 600;
+  color: var(--gris);
+  padding: 6px 2px;
+  border-bottom: 3px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: var(--verde);
+  border-bottom-color: var(--verde);
+}

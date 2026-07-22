@@ -1,0 +1,27 @@
+/* =========================================================
+   9. PÁGINA NOSOTROS Y CANVAS
+   ========================================================= */
+.bloque-mvv { padding: 26px; }
+.bloque-mvv h3 { color: var(--verde); margin-bottom: 10px; }
+
+.valores-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+.valor {
+  text-align: center;
+  padding: 18px 10px;
+  background: var(--gris-claro);
+  border-radius: var(--radio);
+}
+.valor .icono-grande { font-size: 1.8rem; margin-bottom: 8px; }
+
+.bloque-grafico {
+  padding: 26px;
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+canvas { max-width: 100%; }

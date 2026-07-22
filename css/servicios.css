@@ -1,0 +1,23 @@
+/* =========================================================
+   8. FLUJO DE SERVICIOS
+   ========================================================= */
+.flujo {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 30px;
+}
+.flujo h3 { text-align: center; margin-bottom: 24px; }
+.flujo-pasos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.paso {
+  background: var(--gris-claro);
+  border-radius: var(--radio);
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: .92rem;
+  border-left: 4px solid var(--verde);
+}

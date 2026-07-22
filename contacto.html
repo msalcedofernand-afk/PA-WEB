@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Minimarket | Contacto</title>
+<meta name="description" content="Contáctanos: dirección, WhatsApp de delivery, horarios y formulario de consultas de JR Servicios Generales.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+<header class="encabezado">
+  <div class="barra-nav">
+    <a href="index.html" class="logo"><svg class="icono-svg" aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> JR Minimarket</a>
+    <input type="checkbox" id="menu-toggle" class="menu-check">
+    <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="menu-principal" aria-label="Menú principal">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html" class="activo" aria-current="page">Contacto</a>
+      <a href="servicios.html">Servicios</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <h1 class="titulo-pagina">Contáctanos / Delivery</h1>
+
+  <section class="seccion">
+    <div class="grid-2">
+      <div class="info-atencion">
+        <h3>Información de Atención</h3>
+        <div class="dato">
+          <span class="icono" aria-hidden="true">📍</span>
+          <p>JR Servicios Generales, Los Sauces, Chiclayo 14000, Perú</p>
+        </div>
+        <div class="dato">
+          <span class="icono" aria-hidden="true">💬</span>
+          <p>Delivery WhatsApp: <a href="https://wa.me/51987654321" target="_blank" rel="noopener">987 654 321</a></p>
+        </div>
+        <div class="dato">
+          <span class="icono" aria-hidden="true">🕒</span>
+          <p>Lunes a Domingo: 7:00 AM - 10:00 PM</p>
+        </div>
+
+        <div class="mapa">
+          <iframe
+            title="Ubicación de JR Servicios Generales en Los Sauces, Chiclayo"
+            src="https://www.google.com/maps?q=JR%20Servicios%20Generales,%20Los%20Sauces,%20Chiclayo%2014000,%20Per%C3%BA&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <form class="form-contacto" id="formContacto" novalidate>
+        <h3>Envíanos una consulta</h3>
+
+        <div class="campo" id="campoNombre">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required minlength="3">
+          <small class="error">Ingresa tu nombre completo (mínimo 3 caracteres).</small>
+        </div>
+
+        <div class="campo" id="campoContacto">
+          <label for="contactoCliente">Celular / Correo</label>
+          <input type="text" id="contactoCliente" name="contactoCliente" placeholder="Para contactarte" required>
+          <small class="error">Ingresa un celular (9 dígitos) o un correo válido.</small>
+        </div>
+
+        <div class="campo" id="campoMensaje">
+          <label for="mensaje">Mensaje o Pedido Especial</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu consulta..." required minlength="5"></textarea>
+          <small class="error">Cuéntanos brevemente tu pedido o consulta.</small>
+        </div>
+
+        <button type="submit" class="btn btn-verde" style="width:100%;">Enviar Mensaje</button>
+
+        <p class="mensaje-envio" id="mensajeEnvio">¡Gracias! Tu mensaje ha sido preparado. Te contactaremos pronto.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie-grid">
+    <div>
+      <h4>JR Servicios Generales</h4>
+      <p>Tu minimarket de confianza en Los Sauces.</p>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Atención</h4>
+      <p>Lunes a Domingo<br>07:00 AM - 10:00 PM</p>
+    </div>
+  </div>
+  <p class="pie-copy">© 2026 Diseño por Grupo 01 - Ing. de Sistemas USS.</p>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

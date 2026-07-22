@@ -1,0 +1,17 @@
+/* =========================================================
+   JR SERVICIOS GENERALES - ESTILOS PRINCIPALES
+   Archivo de entrada modular que importa todas las secciones
+   ========================================================= */
+
+@import 'variables.css';
+@import 'accesibilidad.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'botones.css';
+@import 'layout.css';
+@import 'productos.css';
+@import 'servicios.css';
+@import 'nosotros.css';
+@import 'contacto.css';
+@import 'pie.css';
+@import 'responsive.css';

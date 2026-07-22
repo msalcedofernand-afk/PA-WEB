@@ -1,0 +1,44 @@
+/* =========================================================
+   5. BOTONES Y SECCIONES
+   ========================================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.18); }
+.btn-claro { background: var(--blanco); color: var(--verde); }
+.btn-ambar { background: var(--ambar); color: var(--gris); }
+.btn-verde { background: var(--verde); color: var(--blanco); }
+
+.seccion { padding: 60px 24px; }
+.seccion-alt { background: var(--gris-claro); }
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--gris);
+  margin-bottom: 10px;
+}
+.subtitulo-seccion {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #5b6670;
+}
+.titulo-pagina {
+  text-align: center;
+  padding: 50px 24px 10px;
+  font-size: 2rem;
+  color: var(--gris);
+}
+.descripcion-pagina {
+  text-align: center;
+  max-width: 750px;
+  margin: 10px auto 0;
+  color: #5b6670;
+}
