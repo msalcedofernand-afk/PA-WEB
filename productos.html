@@ -11,33 +11,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/loader.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/buttons.css">
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/forms.css">
-  <link rel="stylesheet" href="css/map.css">
-  <link rel="stylesheet" href="css/cart.css">
-  <link rel="stylesheet" href="css/floating.css">
-  <link rel="stylesheet" href="css/modal.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/faq.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="canonical" href="https://jrdistribuciónes.com/productos.html">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="canonical" href="https://jrdistribuciones.com/productos.html">
 </head>
 <body>
 
-<div class="page-loader"><div class="loader-spinner"></div><div class="loader-text">JR Distribuciones</div></div>
+<!-- BARRA DE ANUNCIO SUPERIOR -->
+<div class="barra-anuncio" id="barraAnuncio">
+  <div class="container">
+    <span>Envios gratis en compras mayores a S/ 100 &bull; Pide por WhatsApp: 987 654 321</span>
+    <button id="barraAnuncioCerrar" aria-label="Cerrar anuncio">&times;</button>
+  </div>
+</div>
+
+<!-- BARRA DE CONFIANZA -->
+<div class="barra-confianza py-2 d-none d-md-block">
+  <div class="container d-flex justify-content-between align-items-center text-muted fw-semibold">
+    <div class="d-flex align-items-center gap-2">
+      <span class="badge badge-purple-soft p-1 px-2 rounded-pill">⚡ Delivery Rápido</span>
+      <span>Envíos en Chiclayo en 30-60 minutos</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span>Envío GRATIS a partir de S/ 100.00</span>
+      <span class="text-secondary">&bull;</span>
+      <span>Métodos de Pago: <strong class="text-dark">Yape &bull; Plin &bull; Efectivo &bull; Transferencia</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-spinner"></div>
+  <div class="loader-text">JR Distribuciones</div>
+</div>
+<script>(function(){setTimeout(function(){var l=document.getElementById("pageLoader")||document.querySelector(".page-loader");if(l)l.classList.add("hidden");},250);})();</script>
+
 <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="img/logo-jr.png" alt="JR Distribuciones Logo" height="42"> JR Distribuciones</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logos/logo-jr.png" alt="JR Distribuciones Logo" height="42">
+      JR Distribuciones
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navPrincipal">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -45,15 +65,21 @@
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="productos.html">Productos</a></li>
         <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        <li class="nav-item"><a class="btn-cotizar" href="contacto.html">Solicitar cotizacion</a></li>
+        <li class="nav-item"><a class="btn-cotizar" href="contacto.html">Solicitar cotización</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="breadcrumb-jm">
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
   <div class="container">
-    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Inicio</a></li><li class="breadcrumb-item active" aria-current="page">Productos</li></ol></nav>
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb breadcrumb-jm">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Productos</li>
+      </ol>
+    </nav>
   </div>
 </div>
 
@@ -92,282 +118,18 @@
     </div>
 
     <!-- Grid de productos -->
-    <div class="row g-4">
-
-      <!-- ========== ABARROTES ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="arroz costeno saco">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-danger">Oferta</span><img src="img/arroz_costeno_saco.png" alt="Arroz Costeno 45kg" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Arroz Costeno 45kg</h6><div class="producto-precio">S/ 135.00</div><p class="producto-desc">Saco completo ideal para minimarkets y restaurantes.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="aceite primor premium 1l">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/aceite_primor_premium_1l.jpg" alt="Aceite Primor Premium 1L" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Aceite Primor Premium 1L</h6><div class="producto-precio">S/ 7.50</div><p class="producto-desc">Aceite vegetal de primera calidad.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="aceite capri 1l">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/aceite_capri_1l.png" alt="Aceite Capri 1L" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Aceite Capri 1L</h6><div class="producto-precio">S/ 6.50</div><p class="producto-desc">Aceite vegetal para cocinar y freir.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="harina blanca flor">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/harina_blanca_flor_preparada_sin_preparar.png" alt="Harina Blanca Flor 1kg" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Harina Blanca Flor 1kg</h6><div class="producto-precio">S/ 3.80</div><p class="producto-desc">Harina preparada y sin preparar.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="fideos spaghetti molitalia">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/fideos_spaghetti_molitalia.jpg" alt="Fideos Spaghetti Molitalia" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Fideos Spaghetti Molitalia</h6><div class="producto-precio">S/ 3.20</div><p class="producto-desc">Espagueti de trigo puro, coccion uniforme.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="fideos tornillo molitalia">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/fideos_tornillo_molitalia.jpg" alt="Fideos Tornillo Molitalia" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Fideos Tornillo Molitalia</h6><div class="producto-precio">S/ 3.20</div><p class="producto-desc">Tornillo ideal para ensaladas y guisos.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="avena angel instantanea">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/avena_hojuelas_angel_instantanea.png" alt="Avena Angel Instantanea" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Avena Angel Instantanea</h6><div class="producto-precio">S/ 4.50</div><p class="producto-desc">Avena en hojuelas, lista en minutos.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="margarina sello de oro">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/margarina_sello_de_oro_pote.png" alt="Margarina Sello de Oro" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Margarina Sello de Oro</h6><div class="producto-precio">S/ 5.80</div><p class="producto-desc">Margarina cremosa para panaderia y cocina.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== LÁCTEOS ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="leche gloria entera caja">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-primary" style="background:var(--primary-purple) !important;">Popular</span><img src="img/leche_gloria_entera_caja_1l.jpg" alt="Leche Gloria Entera 1L" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Leche Gloria Entera 1L</h6><div class="producto-precio">S/ 4.80</div><p class="producto-desc">Leche entera pasteurizada, sabor natural.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="leche gloria sin lactosa">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/leche_gloria_sin_lactosa_caja_1l.jpg" alt="Leche Gloria Sin Lactosa 1L" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Leche Gloria Sin Lactosa 1L</h6><div class="producto-precio">S/ 5.20</div><p class="producto-desc">Para personas con intolerancia a la lactosa.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="leche gloria chocolate 180ml">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/leche_gloria_chocolate_180ml_cajas.jpg" alt="Leche Gloria Chocolate 180ml" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Leche Gloria Chocolate 180ml</h6><div class="producto-precio">S/ 1.80</div><p class="producto-desc">Leche sabor chocolate, caja con varias unidades.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="leche condensada gloria">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/leche_condensada_gloria_lata.png" alt="Leche Condensada Gloria" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Leche Condensada Gloria</h6><div class="producto-precio">S/ 4.50</div><p class="producto-desc">Leche condensada para postres y reposteria.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="mantequilla gloria">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/mantequilla_gloria_barra_y_pote.png" alt="Mantequilla Gloria" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Mantequilla Gloria</h6><div class="producto-precio">S/ 6.20</div><p class="producto-desc">Mantequilla cremosa, barra o pote.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="crema de leche gloria">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/crema_de_leche_gloria.jpg" alt="Crema de Leche Gloria" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Crema de Leche Gloria</h6><div class="producto-precio">S/ 3.80</div><p class="producto-desc">Crema de leche para pastas y salsas.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="dulce de leche gloria">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/dulce_de_leche_gloria_pote.png" alt="Dulce de Leche Gloria" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Dulce de Leche Gloria</h6><div class="producto-precio">S/ 7.50</div><p class="producto-desc">Dulce de leche tradicional, pote grande.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="lácteos" data-nombre="yogurt gloria fresa">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/yogurt_gloria_fresa_botella.jpg" alt="Yogurt Gloria Fresa" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Lácteos</span><h6>Yogurt Gloria Fresa</h6><div class="producto-precio">S/ 3.50</div><p class="producto-desc">Yogurt bebible sabor fresa, botella.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== EMBUTIDOS ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="jamon razzeto ingles">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-danger">Oferta</span><img src="img/jamon_razzeto_ingles.jpg" alt="Jamon Razzeto Ingles" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Jamon Razzeto Ingles</h6><div class="producto-precio">S/ 8.50</div><p class="producto-desc">Jamon ahumado estilo ingles, rodajas.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="mortadela razzeto">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/mortadela_razzeto.jpg" alt="Mortadela Razzeto" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Mortadela Razzeto</h6><div class="producto-precio">S/ 6.80</div><p class="producto-desc">Mortadela clasica, ideal para sandwich.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="queso edam razzeto">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/queso_edam_razzeto.jpg" alt="Queso Edam Razzeto" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Queso Edam Razzeto</h6><div class="producto-precio">S/ 9.50</div><p class="producto-desc">Queso edam en porcion, sabor suave.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="pizzarella razzeto">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/pizzarella_razzeto.jpg" alt="Pizzarella Razzeto" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Pizzarella Razzeto</h6><div class="producto-precio">S/ 7.20</div><p class="producto-desc">Queso pizzarella rallado, ideal para pizza.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="tocino razzeto ahumado">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/tocino_razzeto_ahumado.jpg" alt="Tocino Razzeto Ahumado" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Tocino Razzeto Ahumado</h6><div class="producto-precio">S/ 7.80</div><p class="producto-desc">Tocino ahumado en tiras.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="hamburguesa super burger">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/hamburguesa_super_burger_razzeto.jpg" alt="Hamburguesa Super Burger" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Hamburguesa Super Burger</h6><div class="producto-precio">S/ 8.20</div><p class="producto-desc">Hamburguesa de carne, paquete.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="hot dog razzeto">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/hot_dog_razzeto.jpg" alt="Salchicha Hot Dog Razzeto" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Salchicha Hot Dog Razzeto</h6><div class="producto-precio">S/ 5.50</div><p class="producto-desc">Salchicha para hot dog, paquete.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="embutidos" data-nombre="jamonada especial razzeto">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/jamonada_especial_razzeto_empaque.jpg" alt="Jamonada Especial Razzeto" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Embutidos</span><h6>Jamonada Especial Razzeto</h6><div class="producto-precio">S/ 6.50</div><p class="producto-desc">Jamonada especial en empaque.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== BEBIDAS ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="bebidas" data-nombre="gaseosa inca kola">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-danger">Popular</span><img src="img/gaseosa_inca_kola.png" alt="Gaseosa Inca Kola" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Bebidas</span><h6>Gaseosa Inca Kola 1.5L</h6><div class="producto-precio">S/ 4.50</div><p class="producto-desc">La bebida dorada del Perú.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="bebidas" data-nombre="cerveza pilsen callao">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/cerveza_pilsen_callao.png" alt="Cerveza Pilsen Callao" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Bebidas</span><h6>Cerveza Pilsen Callao</h6><div class="producto-precio">S/ 3.50</div><p class="producto-desc">Cerveza rubia peruana, lata.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="bebidas" data-nombre="chocolatada shake gloria">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/chocolatada_shake_chocolate_gloria.jpg" alt="Chocolatada Shake Gloria" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Bebidas</span><h6>Chocolatada Shake Gloria</h6><div class="producto-precio">S/ 2.80</div><p class="producto-desc">Shake de chocolate, botella.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="bebidas" data-nombre="chocolate taza cusco sayon">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/chocolate_taza_cusco_sayon.png" alt="Chocolate Taza Cusco Sayon" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Bebidas</span><h6>Chocolate Taza Cusco Sayon</h6><div class="producto-precio">S/ 3.20</div><p class="producto-desc">Chocolate en polvo para taza caliente.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="mermelada gloria fresa">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/mermelada_gloria_fresa_frasco.jpg" alt="Mermelada Gloria Fresa" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Mermelada Gloria Fresa</h6><div class="producto-precio">S/ 5.80</div><p class="producto-desc">Mermelada de fresa en frasco.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== HELADOS ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="helados" data-nombre="helado sublime donofrio">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-primary" style="background:#f59e0b !important;color:#000;">Frio</span><img src="img/helado_donofrio_sublime_dolcetto.jpg" alt="Helado Sublime Dolcetto Donofrio" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Helados</span><h6>Sublime Dolcetto Donofrio</h6><div class="producto-precio">S/ 1.80</div><p class="producto-desc">Chocolate relleno de avellana.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="helados" data-nombre="helado peziduri donofrio">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/helado_donofrio_peziduri_pote.jpg" alt="Helado Peziduri Donofrio" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Helados</span><h6>Peziduri Donofrio</h6><div class="producto-precio">S/ 12.50</div><p class="producto-desc">Helado en pote, sabores variados.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="helados" data-nombre="frio rico sandwich donofrio">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/helado_donofrio_peziduri_frio_rico_sandwich.jpg" alt="Frio Rico Sandwich Donofrio" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Helados</span><h6>Frio Rico Sandwich</h6><div class="producto-precio">S/ 2.20</div><p class="producto-desc">Sandwich de helado, sabor chocolate.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="helados" data-nombre="dolcetto duo donofrio">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/helado_donofrio_sublime_dolcetto_duo.jpg" alt="Dolcetto Duo Donofrio" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Helados</span><h6>Dolcetto Duo Donofrio</h6><div class="producto-precio">S/ 2.00</div><p class="producto-desc">Doble sabor, chocolate y fresa.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== SALSAS ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="salsas alacena">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/salsas_alacena_barbecue_mayonesa_ketchup.png" alt="Salsas Alacena" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Salsas Alacena BBQ/Mayo/Ketchup</h6><div class="producto-precio">S/ 4.20</div><p class="producto-desc">Salsas variadas para todo uso.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="salsa pomarola primor">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/salsa_pomarola_primor.png" alt="Salsa Pomarola Primor" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Salsa Pomarola Primor</h6><div class="producto-precio">S/ 3.50</div><p class="producto-desc">Salsa de tomate para guisos.</p></div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="cremas alacena">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/cremas_alacena_ketchup_mayonesa.png" alt="Cremas Alacena" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Cremas Alacena Ketchup/Mayo</h6><div class="producto-precio">S/ 4.80</div><p class="producto-desc">Ketchup y mayonesa, práctico envase.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== LÁCTEOS EXTRA ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="abarrotes" data-nombre="paneton gloria caja">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><span class="producto-badge badge bg-danger">Temporada</span><img src="img/paneton_gloria_caja.jpg" alt="Paneton Gloria Caja" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Abarrotes</span><h6>Paneton Gloria Caja</h6><div class="producto-precio">S/ 14.50</div><p class="producto-desc">Paneton tradicional, caja 900g.</p></div>
-        </div>
-      </div>
-
-      <!-- ========== LIMPIEZA ========== -->
-      <div class="col-lg-3 col-md-6 producto reveal" data-categoria="limpieza" data-nombre="detergente bolivar">
-        <div class="card card-producto">
-          <div class="producto-img-wrapper"><img src="img/detergente_bolivar_empaque.png" alt="Detergente Bolivar" class="producto-img" loading="lazy"></div>
-          <div class="card-body"><span class="badge-categoria">Limpieza</span><h6>Detergente Bolivar</h6><div class="producto-precio">S/ 3.50</div><p class="producto-desc">Detergente en polvo, poder de limpiado.</p></div>
-        </div>
-      </div>
-
+    <div class="row g-4" id="grillaProductos">
+      <!-- Productos cargados dinámicamente desde data/products-data.js -->
+    </div>
+    
+    <!-- Paginación de Productos -->
+    <div class="d-flex flex-column align-items-center mt-5">
+      <div id="paginacion" class="paginacion-jm mb-2" style="display: none;"></div>
+      <div id="paginacionInfo" class="text-muted small fw-semibold"></div>
+    </div>
+    <div id="sinResultados" class="text-center py-5" style="display: none;">
+      <h5 class="text-muted fw-bold">No se encontraron productos</h5>
+      <p class="text-secondary small">Prueba con otro término de búsqueda o categoría.</p>
     </div>
   </div>
 </main>
@@ -422,17 +184,44 @@
   <span class="carrito-contador" id="carritoContador">0</span>
 </button>
 
-<script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/jquery-demo.js"></script>
-<script src="js/loader.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/forms.js"></script>
-<script src="js/products.js"></script>
-<script src="js/counters.js"></script>
-<script src="js/canvas.js"></script>
-<script src="js/scroll.js"></script>
-<script src="js/effects.js"></script>
-<script src="js/cart.js"></script>
+<!-- MODAL DETALLE DE PRODUCTO -->
+<div class="modal fade" id="modalDetalleProducto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden;">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4 pt-0">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5 text-center">
+            <img id="modalProductoImg" src="" alt="" class="img-fluid rounded-4 shadow-sm" style="max-height: 250px; object-fit: contain;">
+          </div>
+          <div class="col-md-7">
+            <span id="modalProductoCategoria" class="badge-categoria mb-2 d-inline-block">Abarrotes</span>
+            <h4 id="modalProductoNombre" class="fw-bold mb-2" style="font-family: var(--font-titulo);">Nombre del Producto</h4>
+            <div id="modalProductoPrecio" class="fs-3 fw-bold mb-2" style="color: var(--primary-purple);">S/ 0.00</div>
+            <p id="modalProductoDesc" class="text-muted mb-4">Descripción del producto.</p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="input-group" style="width: 130px;">
+                <button class="btn btn-outline-secondary" type="button" id="modalCantMenos">-</button>
+                <input type="number" class="form-control text-center fw-bold" id="modalCantInput" value="1" min="1" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="modalCantMas">+</button>
+              </div>
+              <button class="btn btn-jm-morado flex-grow-1" id="modalBtnAgregar">
+                <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Agregar al Pedido
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="data/products-data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -21,11 +21,14 @@
   .modal-liquidacion h3 { font-size: 1.2rem; }
   .modal-liquidacion .btn { width: 100%; }
   .carrito-panel { width: 100vw; max-width: 100vw; }
-  .carrito-float { right: 16px; bottom: 90px; width: 52px; height: 52px; }
+  .whatsapp-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+  .whatsapp-float svg { width: 24px; height: 24px; }
+  .carrito-float { right: 16px; bottom: 76px; width: 50px; height: 50px; }
   .carrito-float svg { width: 22px; height: 22px; }
-  .whatsapp-float { bottom: 16px; right: 16px; width: 52px; height: 52px; }
-  .whatsapp-float svg { width: 26px; height: 26px; }
   .btn-volver-arriba { left: 16px; bottom: 16px; width: 42px; height: 42px; }
   .productos-check-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
   .producto-check { padding: 8px 10px; font-size: .8rem; }
+  .filtros-wrapper { overflow-x: auto; padding-bottom: 8px; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .filtro-btn { flex-shrink: 0; }
 }
+

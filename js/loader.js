@@ -1,20 +1,36 @@
-/* ==================================================== LOADER - Page Loader ==================================================== */
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  var loader = document.querySelector('.page-loader');
-  if (loader) {
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        loader.classList.add('hidden');
-        document.body.classList.add('loaded');
-      }, 400);
+function onReady(fn) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    try { fn(); } catch (e) { console.error(e); }
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      try { fn(); } catch (e) { console.error(e); }
     });
-    // Fallback: hide loader after 3s max
-    setTimeout(function () {
+  }
+}
+
+/* ==================================================== LOADER - Fast Page Loader ==================================================== */
+
+(function () {
+  function ocultarLoader() {
+    var loader = document.querySelector('.page-loader');
+    if (loader && !loader.classList.contains('hidden')) {
       loader.classList.add('hidden');
       document.body.classList.add('loaded');
-    }, 3000);
+    }
   }
 
-});
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(ocultarLoader, 200);
+  } else {
+    onReady(function () {
+      setTimeout(ocultarLoader, 200);
+    });
+  }
+
+  window.addEventListener('load', function () {
+    ocultarLoader();
+  });
+
+  // Safety fallback
+  setTimeout(ocultarLoader, 1000);
+})();

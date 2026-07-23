@@ -1,6 +1,16 @@
+function onReady(fn) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    try { fn(); } catch (e) { console.error(e); }
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      try { fn(); } catch (e) { console.error(e); }
+    });
+  }
+}
+
 /* ==================================================== COUNTERS - Animated Counters ==================================================== */
 
-document.addEventListener('DOMContentLoaded', function () {
+onReady(function () {
 
   var contadores = document.querySelectorAll('.contador-numero[data-objetivo]');
   if (contadores.length > 0 && 'IntersectionObserver' in window) {

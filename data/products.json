@@ -1,0 +1,650 @@
+[
+  {
+    "id": "prod-1",
+    "nombre": "Arroz Costeno 45kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 135.0,
+    "img": "img/productos/abarrotes/arroz_costeno_saco.png",
+    "oferta": "Oferta"
+  },
+  {
+    "id": "prod-2",
+    "nombre": "Aceite Primor Premium 1L",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 7.5,
+    "img": "img/productos/abarrotes/aceite_primor_premium_1l.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-3",
+    "nombre": "Aceite Capri 1L",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 6.5,
+    "img": "img/productos/abarrotes/aceite_capri_1l.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-4",
+    "nombre": "Harina Blanca Flor 1kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 3.8,
+    "img": "img/productos/abarrotes/harina_blanca_flor_preparada_sin_preparar.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-5",
+    "nombre": "Fideos Spaghetti Molitalia",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 3.2,
+    "img": "img/productos/abarrotes/fideos_spaghetti_molitalia.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-6",
+    "nombre": "Fideos Tornillo Molitalia",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 3.2,
+    "img": "img/productos/abarrotes/fideos_tornillo_molitalia.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-7",
+    "nombre": "Avena Angel Instantanea",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 4.5,
+    "img": "img/productos/abarrotes/avena_hojuelas_angel_instantanea.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-8",
+    "nombre": "Margarina Sello de Oro",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 5.8,
+    "img": "img/productos/abarrotes/margarina_sello_de_oro_pote.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-9",
+    "nombre": "Leche Gloria Entera 1L",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 4.8,
+    "img": "img/productos/lacteos/leche_gloria_entera_caja_1l.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-10",
+    "nombre": "Leche Gloria Sin Lactosa 1L",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 5.2,
+    "img": "img/productos/lacteos/leche_gloria_sin_lactosa_caja_1l.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-11",
+    "nombre": "Leche Gloria Chocolate 180ml",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 1.8,
+    "img": "img/productos/lacteos/leche_gloria_chocolate_180ml_cajas.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-12",
+    "nombre": "Leche Condensada Gloria",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 4.5,
+    "img": "img/productos/lacteos/leche_condensada_gloria_lata.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-13",
+    "nombre": "Mantequilla Gloria",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 6.2,
+    "img": "img/productos/lacteos/mantequilla_gloria_barra_y_pote.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-14",
+    "nombre": "Crema de Leche Gloria",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 3.8,
+    "img": "img/productos/lacteos/crema_de_leche_gloria.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-15",
+    "nombre": "Dulce de Leche Gloria",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 7.5,
+    "img": "img/productos/lacteos/dulce_de_leche_gloria_pote.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-16",
+    "nombre": "Yogurt Gloria Fresa",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 3.5,
+    "img": "img/productos/lacteos/yogurt_gloria_fresa_botella.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-17",
+    "nombre": "Jamon Razzeto Ingles",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 8.5,
+    "img": "img/productos/embutidos/jamon_razzeto_ingles.jpg",
+    "oferta": "Oferta"
+  },
+  {
+    "id": "prod-18",
+    "nombre": "Mortadela Razzeto",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 6.8,
+    "img": "img/productos/embutidos/mortadela_razzeto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-19",
+    "nombre": "Queso Edam Razzeto",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 9.5,
+    "img": "img/productos/embutidos/queso_edam_razzeto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-20",
+    "nombre": "Pizzarella Razzeto",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 7.2,
+    "img": "img/productos/embutidos/pizzarella_razzeto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-21",
+    "nombre": "Tocino Razzeto Ahumado",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 7.8,
+    "img": "img/productos/embutidos/tocino_razzeto_ahumado.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-22",
+    "nombre": "Hamburguesa Super Burger",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 8.2,
+    "img": "img/productos/embutidos/hamburguesa_super_burger_razzeto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-23",
+    "nombre": "Salchicha Hot Dog Razzeto",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 5.5,
+    "img": "img/productos/embutidos/hot_dog_razzeto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-24",
+    "nombre": "Jamonada Especial Razzeto",
+    "categoria": "embutidos",
+    "categoriaLabel": "Embutidos",
+    "precio": 6.5,
+    "img": "img/productos/embutidos/jamonada_especial_razzeto_empaque.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-25",
+    "nombre": "Gaseosa Inca Kola 1.5L",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 4.5,
+    "img": "img/productos/bebidas/gaseosa_inca_kola.png",
+    "oferta": "Popular"
+  },
+  {
+    "id": "prod-26",
+    "nombre": "Cerveza Pilsen Callao",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 3.5,
+    "img": "img/productos/bebidas/cerveza_pilsen_callao.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-27",
+    "nombre": "Chocolatada Shake Gloria",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 2.8,
+    "img": "img/productos/bebidas/chocolatada_shake_chocolate_gloria.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-28",
+    "nombre": "Chocolate Taza Cusco Sayon",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 3.2,
+    "img": "img/productos/bebidas/chocolate_taza_cusco_sayon.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-29",
+    "nombre": "Mermelada Gloria Fresa",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 5.8,
+    "img": "img/productos/abarrotes/mermelada_gloria_fresa_frasco.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-30",
+    "nombre": "Sublime Dolcetto Donofrio",
+    "categoria": "helados",
+    "categoriaLabel": "Helados",
+    "precio": 1.8,
+    "img": "img/productos/helados/helado_donofrio_sublime_dolcetto.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-31",
+    "nombre": "Peziduri Donofrio",
+    "categoria": "helados",
+    "categoriaLabel": "Helados",
+    "precio": 12.5,
+    "img": "img/productos/helados/helado_donofrio_peziduri_pote.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-32",
+    "nombre": "Frio Rico Sandwich",
+    "categoria": "helados",
+    "categoriaLabel": "Helados",
+    "precio": 2.2,
+    "img": "img/productos/helados/helado_donofrio_peziduri_frio_rico_sandwich.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-33",
+    "nombre": "Dolcetto Duo Donofrio",
+    "categoria": "helados",
+    "categoriaLabel": "Helados",
+    "precio": 2.0,
+    "img": "img/productos/helados/helado_donofrio_sublime_dolcetto_duo.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-34",
+    "nombre": "Salsas Alacena BBQ/Mayo/Ketchup",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 4.2,
+    "img": "img/productos/abarrotes/salsas_alacena_barbecue_mayonesa_ketchup.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-35",
+    "nombre": "Salsa Pomarola Primor",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 3.5,
+    "img": "img/productos/abarrotes/salsa_pomarola_primor.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-36",
+    "nombre": "Cremas Alacena Ketchup/Mayo",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 4.8,
+    "img": "img/productos/abarrotes/cremas_alacena_ketchup_mayonesa.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-37",
+    "nombre": "Paneton Gloria Caja",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 14.5,
+    "img": "img/productos/abarrotes/paneton_gloria_caja.jpg",
+    "oferta": "Temporada"
+  },
+  {
+    "id": "prod-38",
+    "nombre": "Detergente Bolivar",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 3.5,
+    "img": "img/productos/limpieza/detergente_bolivar_empaque.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-39",
+    "nombre": "Detergente Opal 4kg",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 18.5,
+    "img": "img/productos/limpieza/detergente_polvo_opal_antibacterial_4kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-40",
+    "nombre": "Esponja Scotch Brite 3un",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 4.5,
+    "img": "img/productos/limpieza/esponja_scotch_brite_multiusos_3un.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-41",
+    "nombre": "Esponja Scotch Brite 6un",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 7.8,
+    "img": "img/productos/limpieza/esponja_scotch_brite_multiusos_6un.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-42",
+    "nombre": "Pano Absorbente 9un",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 12.0,
+    "img": "img/productos/limpieza/pano_absorbente_scotch_brite_9un.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-43",
+    "nombre": "Bolsa Basura Virutex 50L",
+    "categoria": "limpieza",
+    "categoriaLabel": "Limpieza",
+    "precio": 14.5,
+    "img": "img/productos/limpieza/bolsa_basura_50l_virutex_negro_60un.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-44",
+    "nombre": "Arroz Añejo Costeño 5kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 16.5,
+    "img": "img/productos/abarrotes/arroz_anejo_extra_costeno_5kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-45",
+    "nombre": "Arroz Extra Faraón 5kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 17.0,
+    "img": "img/productos/abarrotes/arroz_extra_faraon_5kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-46",
+    "nombre": "Arroz Gourmet Gran Chalán 5kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 18.0,
+    "img": "img/productos/abarrotes/arroz_extra_gourmetanejo_gran_chalan_5kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-47",
+    "nombre": "Azúcar Rubia Cartavio 5kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 15.5,
+    "img": "img/productos/abarrotes/azucar_rubia_cartavio_5kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-48",
+    "nombre": "Aceite Cocinero 1L",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 6.8,
+    "img": "img/productos/abarrotes/aceite_cocinero_1l.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-49",
+    "nombre": "Aceite Primor Premium 3 Pack",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 21.0,
+    "img": "img/productos/abarrotes/aceite_primor_premium_3pack.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-50",
+    "nombre": "Café Nescafé Tradición 170g",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 18.5,
+    "img": "img/productos/abarrotes/cafe_instantaneo_nescafe_tradicion_170g.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-51",
+    "nombre": "Café Nescafé Fina Selección 170g",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 22.0,
+    "img": "img/productos/abarrotes/cafe_instantaneo_nescafe_fina_seleccion_170g.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-52",
+    "nombre": "Harina Sin Preparar 1kg",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 3.5,
+    "img": "img/productos/abarrotes/harina_blanca_flor_preparada_sin_preparar.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-53",
+    "nombre": "Mermelada Gloria Fresa",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 5.8,
+    "img": "img/productos/abarrotes/mermelada_gloria_fresa_frasco.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-54",
+    "nombre": "Cremas Peruanas Alacena",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 4.2,
+    "img": "img/productos/abarrotes/cremas_peruanas_alacena_huancaina_uchucuta_tari.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-55",
+    "nombre": "Spaghetti Don Vittorio 950g",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 5.5,
+    "img": "img/productos/abarrotes/fideos_don_vittorio_spaghetti_950g.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-56",
+    "nombre": "Pan Integral Bimbo 360g",
+    "categoria": "abarrotes",
+    "categoriaLabel": "Abarrotes",
+    "precio": 5.8,
+    "img": "img/productos/abarrotes/pan_molde_integral_bimbo_vital_360g.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-57",
+    "nombre": "Gaseosa Coca Cola 3L",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 9.5,
+    "img": "img/productos/bebidas/gaseosa_coca_cola_botella_3l.jpg",
+    "oferta": "Popular"
+  },
+  {
+    "id": "prod-58",
+    "nombre": "Gaseosa Guaraná 3L",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 8.5,
+    "img": "img/productos/bebidas/gaseosa_guarana_botella_3l.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-59",
+    "nombre": "Hey Fit Black Fizz 600ml",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 3.8,
+    "img": "img/productos/bebidas/gaseosa_hey_fit_black_fizz_600ml.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-60",
+    "nombre": "Shake Capuccino Gloria",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 2.8,
+    "img": "img/productos/bebidas/chocolatada_shake_capuccino_gloria.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-61",
+    "nombre": "Shake Mocaccino Gloria",
+    "categoria": "bebidas",
+    "categoriaLabel": "Bebidas",
+    "precio": 2.8,
+    "img": "img/productos/bebidas/chocolatada_shake_mocaccino_gloria.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-62",
+    "nombre": "Leche Gloria Niños Lata",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 4.2,
+    "img": "img/productos/lacteos/leche_gloria_ninos_lata.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-63",
+    "nombre": "Leche Gloria Zero Lacto 6un",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 22.0,
+    "img": "img/productos/lacteos/leche_gloria_zero_lacto_lata_390g_6un.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-64",
+    "nombre": "Leche Sin Lactosa 3 Pack",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 15.0,
+    "img": "img/productos/lacteos/leche_gloria_sin_lactosa_caja_3pack.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-65",
+    "nombre": "Leche Piamonte 946ml",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 4.5,
+    "img": "img/productos/lacteos/leche_entera_piamonte_946ml.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-66",
+    "nombre": "Leche Condensada Doypack",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 5.2,
+    "img": "img/productos/lacteos/leche_condensada_gloria_doypack.png",
+    "oferta": null
+  },
+  {
+    "id": "prod-67",
+    "nombre": "Mantequilla Gloria Pote 390g",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 12.5,
+    "img": "img/productos/lacteos/mantequilla_gloria_pote_390g.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-68",
+    "nombre": "Yogurt Griego Vakimu 1kg",
+    "categoria": "lácteos",
+    "categoriaLabel": "Lácteos",
+    "precio": 16.0,
+    "img": "img/productos/lacteos/yogurt_griego_arandanos_vakimu_1kg.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-69",
+    "nombre": "Pisco Cuatro Gallos Quebranta 700ml",
+    "categoria": "licores",
+    "categoriaLabel": "Licores",
+    "precio": 38.0,
+    "img": "img/productos/licores/pisco_cuatro_gallos_puro_quebranta_700ml.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-70",
+    "nombre": "Pisco Cuatro Gallos Italia 700ml",
+    "categoria": "licores",
+    "categoriaLabel": "Licores",
+    "precio": 42.0,
+    "img": "img/productos/licores/pisco_cuatro_gallos_puro_italia_700ml.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-71",
+    "nombre": "Pisco Cuatro Gallos Acholado 700ml",
+    "categoria": "licores",
+    "categoriaLabel": "Licores",
+    "precio": 40.0,
+    "img": "img/productos/licores/pisco_cuatro_gallos_puro_acholado_700ml.jpg",
+    "oferta": null
+  },
+  {
+    "id": "prod-72",
+    "nombre": "Johnnie Walker Red Label 750ml",
+    "categoria": "licores",
+    "categoriaLabel": "Licores",
+    "precio": 65.0,
+    "img": "img/productos/licores/whisky_johnnie_walker_red_label_750ml.jpg",
+    "oferta": null
+  }
+]

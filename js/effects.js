@@ -1,6 +1,16 @@
+function onReady(fn) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    try { fn(); } catch (e) { console.error(e); }
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      try { fn(); } catch (e) { console.error(e); }
+    });
+  }
+}
+
 /* ==================================================== EFFECTS - Newsletter + Parallax + Tooltips + Liquidacion Modal ==================================================== */
 
-document.addEventListener('DOMContentLoaded', function () {
+onReady(function () {
 
   var newsletterForm = document.getElementById('formNewsletter');
   if (newsletterForm) {
@@ -47,12 +57,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // --- Persistence for Barra Anuncio ---
+  var barraAnuncio = document.getElementById('barraAnuncio');
+  var btnCerrarAnuncio = document.getElementById('barraAnuncioCerrar');
+  if (barraAnuncio) {
+    if (sessionStorage.getItem('barra_anuncio_cerrada') === '1') {
+      barraAnuncio.style.display = 'none';
+    }
+    if (btnCerrarAnuncio) {
+      btnCerrarAnuncio.addEventListener('click', function () {
+        sessionStorage.setItem('barra_anuncio_cerrada', '1');
+      });
+    }
+  }
+
   var modalLiquidacion = document.getElementById('modalLiquidacion');
   if (modalLiquidacion) {
     var liquidacionCerrada = sessionStorage.getItem('liquidacion_cerrada');
-    if (!liquidacionCerrada) {
+    if (!liquidacionCerrada && typeof bootstrap !== 'undefined') {
       setTimeout(function () {
-        var bsModal = new bootstrap.Modal(modalLiquidacion);
+        var bsModal = bootstrap.Modal.getOrCreateInstance(modalLiquidacion);
         bsModal.show();
       }, 3000);
     }

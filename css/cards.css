@@ -61,6 +61,8 @@
   height: 100%;
   background: var(--background-card);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .card-producto:hover {
   transform: translateY(-10px) scale(1.01);
@@ -72,6 +74,7 @@
   overflow: hidden;
   height: 200px;
   background: linear-gradient(135deg, #f8f9ff, #f1f5f9);
+  flex-shrink: 0;
 }
 .card-producto .producto-img {
   width: 100%;
@@ -91,11 +94,15 @@
 .card-producto .card-body {
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .card-producto h6 {
   font-family: var(--font-titulo);
   font-weight: 700;
   color: var(--primary-deep);
+  margin-bottom: 6px;
 }
 .card-producto .producto-precio {
   font-size: 1.35rem;
@@ -110,6 +117,7 @@
 .card-producto .producto-desc {
   font-size: .87rem;
   color: var(--text-gray);
+  flex: 1;
 }
 .card-producto .badge-categoria {
   display: inline-block;
@@ -121,22 +129,96 @@
   color: var(--primary-purple);
   padding: 4px 14px;
   border-radius: 50px;
+  margin-bottom: 6px;
+  align-self: center;
+}
+.card-producto .producto-meta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,.06);
+  font-size: .75rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+.card-producto .producto-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Botones de producto */
+.card-producto .card-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.card-producto .btn-agregar-carrito,
+.card-producto .btn-ver-detalle {
+  flex: 1;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 8px;
+  font-size: .75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: var(--font-body);
+}
+.card-producto .btn-agregar-carrito {
+  background: var(--primary-coral);
+  color: #fff;
+}
+.card-producto .btn-agregar-carrito:hover {
+  background: #e0264f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,46,99,.3);
+}
+.card-producto .btn-agregar-carrito:active {
+  background: var(--primary-purple);
+  transform: scale(.95);
+}
+.card-producto .btn-ver-detalle {
+  background: var(--primary-purple);
+  color: #fff;
+}
+.card-producto .btn-ver-detalle:hover {
+  background: #6a24a8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(123,47,190,.3);
+}
+.card-producto .btn-ver-detalle:active {
+  background: var(--primary-coral);
+  transform: scale(.95);
 }
 
 /* =========================================================
    FILTROS
    ========================================================= */
+.filtros-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
 .filtro-btn {
-  padding: 10px 26px;
+  padding: 8px 20px;
   border-radius: var(--radius-pill);
   border: 2px solid var(--primary-purple);
   background: #fff;
   color: var(--primary-purple);
   font-weight: 600;
-  font-size: .9rem;
+  font-size: .82rem;
   cursor: pointer;
   transition: all .3s ease;
   font-family: var(--font-body);
+  white-space: nowrap;
 }
 .filtro-btn:hover {
   background: rgba(123,47,190,.08);
@@ -220,3 +302,54 @@
   margin-bottom: 6px;
 }
 .card-valor p { color: var(--text-gray); font-size: .87rem; margin: 0; }
+
+/* =========================================================
+   PAGINACION
+   ========================================================= */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.paginacion button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary-purple);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--primary-purple);
+  font-weight: 700;
+  font-size: .85rem;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginacion button:hover {
+  background: rgba(123,47,190,.1);
+  transform: translateY(-2px);
+}
+.paginacion button.activo {
+  background: var(--primary-purple);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(123,47,190,.3);
+  border-color: var(--primary-purple);
+}
+.paginacion button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+  transform: none;
+}
+.paginacion-info {
+  width: 100%;
+  text-align: center;
+  font-size: .82rem;
+  color: var(--text-gray);
+  margin-top: 8px;
+  font-family: var(--font-body);
+}

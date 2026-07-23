@@ -81,6 +81,20 @@
   background-color: var(--primary-purple);
   transform: scale(1.2);
 }
+.carousel-jm .carousel-control-prev,
+.carousel-jm .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.carousel-jm .carousel-control-prev {
+  left: 12px;
+}
+.carousel-jm .carousel-control-next {
+  right: 12px;
+}
 .carousel-jm .carousel-control-prev-icon,
 .carousel-jm .carousel-control-next-icon {
   width: 48px;
@@ -93,6 +107,11 @@
 .carousel-jm .carousel-control-prev-icon:hover,
 .carousel-jm .carousel-control-next-icon:hover {
   background-color: var(--primary-coral);
+}
+.carousel-jm .carousel-control-prev-icon:active,
+.carousel-jm .carousel-control-next-icon:active {
+  background-color: var(--primary-purple);
+  transform: scale(.9);
 }
 .carousel-slide {
   position: relative;
@@ -117,6 +136,8 @@
   position: relative;
   z-index: 2;
   max-width: 550px;
+  text-align: center;
+  margin: 0 auto;
 }
 .carousel-slide .slide-content h2 {
   font-family: var(--font-titulo);
@@ -139,6 +160,28 @@
   background: var(--background);
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+.marcas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.marca-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  opacity: .7;
+  transition: all .3s ease;
+  border-radius: 6px;
+}
+.marca-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 .marca-item {
   display: flex;
@@ -337,3 +380,92 @@
   padding: 30px;
 }
 canvas { max-width: 100%; border-radius: 12px; }
+
+/* =========================================================
+   COMO FUNCIONA - 4 PASOS
+   ========================================================= */
+.paso-circulo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-coral));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titulo);
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(123,47,190,.3);
+  transition: all .4s ease;
+}
+.paso-circulo:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(123,47,190,.4);
+}
+
+/* =========================================================
+   BADGES DE CONFIANZA
+   ========================================================= */
+.badge-confianza-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--text-dark);
+  transition: all .3s ease;
+}
+.badge-confianza-item:hover {
+  color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+.badge-confianza-icon {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--primary-coral);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+.breadcrumb-jm {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: .85rem;
+}
+.breadcrumb-jm .breadcrumb-item {
+  color: var(--text-gray);
+}
+.breadcrumb-jm .breadcrumb-item a {
+  color: var(--primary-purple);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s ease;
+}
+.breadcrumb-jm .breadcrumb-item a:hover {
+  color: var(--primary-coral);
+  text-decoration: underline;
+}
+.breadcrumb-jm .breadcrumb-item.active {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+.breadcrumb-jm .breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+  color: var(--text-gray);
+}
+.breadcrumb-bar {
+  background: var(--background-soft);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}

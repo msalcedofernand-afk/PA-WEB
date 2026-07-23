@@ -1,6 +1,16 @@
+function onReady(fn) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    try { fn(); } catch (e) { console.error(e); }
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      try { fn(); } catch (e) { console.error(e); }
+    });
+  }
+}
+
 /* ==================================================== NAVBAR - Scroll Effect + Mobile Close ==================================================== */
 
-document.addEventListener('DOMContentLoaded', function () {
+onReady(function () {
 
   var navbar = document.querySelector('.navbar');
   function handleNavbarScroll() {

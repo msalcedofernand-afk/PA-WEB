@@ -1,10 +1,24 @@
-/* ==================================================== CANVAS - Graph with Animation ==================================================== */
+function onReady(fn) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    try { fn(); } catch (e) { console.error(e); }
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      try { fn(); } catch (e) { console.error(e); }
+    });
+  }
+}
 
-document.addEventListener('DOMContentLoaded', function () {
+/* ==================================================== CANVAS - Graph with High DPI ==================================================== */
+
+onReady(function () {
 
   var canvas = document.getElementById('graficoCategorias');
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
+    
+    // Set internal resolution
+    canvas.width = 560;
+    canvas.height = 300;
 
     var datos = [
       { etiqueta: 'Abarrotes', valor: 45, color: '#7B2FBE' },
@@ -17,13 +31,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var ancho = canvas.width;
     var alto = canvas.height;
     var margenInferior = 50;
-    var margenSuperior = 20;
+    var margenSuperior = 25;
     var anchoBarra = 60;
-    var espacio = 30;
+    var espacio = 32;
     var maxValor = 50;
     var inicioX = 50;
-    var duracion = 1200;
-    var inicioAnimacion = null;
+
+    function drawRectRounded(context, x, y, width, height, radius) {
+      if (context.roundRect) {
+        context.beginPath();
+        context.roundRect(x, y, width, height, [radius, radius, 0, 0]);
+        context.fill();
+      } else {
+        context.beginPath();
+        context.rect(x, y, width, height);
+        context.fill();
+      }
+    }
 
     function dibujarEjes() {
       ctx.strokeStyle = '#e2e8f0';
@@ -43,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.stroke();
 
         ctx.fillStyle = '#94a3b8';
-        ctx.font = '11px Inter, Arial, sans-serif';
+        ctx.font = '600 12px Inter, Arial, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText((i * 10) + '%', 36, yLinea + 4);
       }
@@ -59,52 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
         var x = inicioX + i * (anchoBarra + espacio);
         var y = alto - margenInferior - alturaBarra;
 
-        ctx.fillStyle = 'rgba(0,0,0,.06)';
-        ctx.beginPath();
-        ctx.roundRect(x + 4, y + 4, anchoBarra, alturaBarra, [8, 8, 0, 0]);
-        ctx.fill();
+        ctx.fillStyle = 'rgba(0,0,0,.05)';
+        drawRectRounded(ctx, x + 3, y + 3, anchoBarra, alturaBarra, 8);
 
         ctx.fillStyle = item.color;
-        ctx.beginPath();
-        ctx.roundRect(x, y, anchoBarra, alturaBarra, [8, 8, 0, 0]);
-        ctx.fill();
+        drawRectRounded(ctx, x, y, anchoBarra, alturaBarra, 8);
 
-        if (progreso > 0.8) {
-          var opacidad = (progreso - 0.8) / 0.2;
-          ctx.globalAlpha = opacidad;
-          ctx.fillStyle = '#1e293b';
-          ctx.font = 'bold 13px Inter, Arial, sans-serif';
-          ctx.textAlign = 'center';
-          ctx.fillText(item.valor + '%', x + anchoBarra / 2, y - 10);
+        ctx.fillStyle = '#1e293b';
+        ctx.font = 'bold 13px Inter, Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(item.valor + '%', x + anchoBarra / 2, y - 8);
 
-          ctx.fillStyle = '#475569';
-          ctx.font = '11px Inter, Arial, sans-serif';
-          ctx.fillText(item.etiqueta, x + anchoBarra / 2, alto - margenInferior + 18);
-          ctx.globalAlpha = 1;
-        }
+        ctx.fillStyle = '#475569';
+        ctx.font = '500 12px Inter, Arial, sans-serif';
+        ctx.fillText(item.etiqueta, x + anchoBarra / 2, alto - margenInferior + 20);
       });
     }
 
-    function animar(timestamp) {
-      if (!inicioAnimacion) inicioAnimacion = timestamp;
-      var elapsed = timestamp - inicioAnimacion;
-      var progreso = Math.min(elapsed / duracion, 1);
-      progreso = 1 - Math.pow(1 - progreso, 3);
-      dibujarBarras(progreso);
-      if (progreso < 1) {
-        requestAnimationFrame(animar);
-      }
-    }
-
-    var canvasObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          requestAnimationFrame(animar);
-          canvasObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    canvasObserver.observe(canvas);
+    dibujarBarras(1);
   }
 
 });
