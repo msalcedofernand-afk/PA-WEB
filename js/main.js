@@ -849,6 +849,25 @@ onReady(function () {
 
         paginaActual = 1;
         renderPagina();
+
+  // Grid / List View Toggle Handler
+  var btnGrid = document.getElementById('btnVistaGrid');
+  var btnList = document.getElementById('btnVistaList');
+  var grillaEl = document.getElementById('grillaProductos');
+
+  if (btnGrid && btnList && grillaEl) {
+    btnGrid.addEventListener('click', function () {
+      btnGrid.classList.add('activo');
+      btnList.classList.remove('activo');
+      grillaEl.classList.remove('vista-lista');
+    });
+    btnList.addEventListener('click', function () {
+      btnList.classList.add('activo');
+      btnGrid.classList.remove('activo');
+      grillaEl.classList.add('vista-lista');
+    });
+  }
+
       });
     });
   }
@@ -1637,5 +1656,24 @@ onReady(function () {
   }
 
 });
+
+
+  // Ensure modal X close button works 100% cleanly
+  var modalEl = document.getElementById('modalDetalleProducto');
+  if (modalEl) {
+    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (typeof bootstrap !== 'undefined') {
+          var bsModal = bootstrap.Modal.getInstance(modalEl);
+          if (bsModal) bsModal.hide();
+        }
+        modalEl.classList.remove('show');
+        modalEl.style.display = 'none';
+        document.body.classList.remove('modal-open');
+        var backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) backdrop.remove();
+      });
+    });
+  }
 
 

@@ -355,3 +355,22 @@ onReady(function () {
   }
 
 });
+
+
+  // Ensure modal X close button works 100% cleanly
+  var modalEl = document.getElementById('modalDetalleProducto');
+  if (modalEl) {
+    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (typeof bootstrap !== 'undefined') {
+          var bsModal = bootstrap.Modal.getInstance(modalEl);
+          if (bsModal) bsModal.hide();
+        }
+        modalEl.classList.remove('show');
+        modalEl.style.display = 'none';
+        document.body.classList.remove('modal-open');
+        var backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) backdrop.remove();
+      });
+    });
+  }

@@ -118,6 +118,19 @@
     </div>
 
     <!-- Grid de productos -->
+    
+        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+          <div class="d-flex align-items-center gap-2 ms-auto">
+            <span class="text-muted small fw-bold me-1">Vista:</span>
+            <button class="vista-btn activo" id="btnVistaGrid" title="Vista en Cuadrícula">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </button>
+            <button class="vista-btn" id="btnVistaList" title="Vista en Lista">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
     <div class="row g-4" id="grillaProductos">
       <!-- Productos cargados dinámicamente desde data/products-data.js -->
     </div>

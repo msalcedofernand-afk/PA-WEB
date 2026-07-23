@@ -724,6 +724,25 @@ onReady(function () {
 
         paginaActual = 1;
         renderPagina();
+
+  // Grid / List View Toggle Handler
+  var btnGrid = document.getElementById('btnVistaGrid');
+  var btnList = document.getElementById('btnVistaList');
+  var grillaEl = document.getElementById('grillaProductos');
+
+  if (btnGrid && btnList && grillaEl) {
+    btnGrid.addEventListener('click', function () {
+      btnGrid.classList.add('activo');
+      btnList.classList.remove('activo');
+      grillaEl.classList.remove('vista-lista');
+    });
+    btnList.addEventListener('click', function () {
+      btnList.classList.add('activo');
+      btnGrid.classList.remove('activo');
+      grillaEl.classList.add('vista-lista');
+    });
+  }
+
       });
     });
   }
