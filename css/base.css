@@ -1,0 +1,140 @@
+/* ==================================================== BASE - Variables, Reset, Tipografías, Utilidades ==================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-deep: #0D0221;
+  --primary-purple: #7B2FBE;
+  --secondary-purple: #A855F7;
+  --primary-coral: #FF2E63;
+  --secondary-coral: #FF6B8A;
+  --accent-gold: #F9A826;
+  --accent-teal: #00D2D3;
+  --text-dark: #1a1a2e;
+  --text-gray: #64748b;
+  --text-light: #94a3b8;
+  --background: #FAFBFE;
+  --background-soft: #F1F5F9;
+  --background-card: #FFFFFF;
+  --gradient-brand: linear-gradient(135deg, #7B2FBE 0%, #FF2E63 50%, #F9A826 100%);
+  --gradient-purple: linear-gradient(135deg, #7B2FBE, #A855F7);
+  --gradient-coral: linear-gradient(135deg, #FF2E63, #FF6B8A);
+  --gradient-dark: linear-gradient(135deg, #0D0221, #1B0A3C);
+  --gradient-warm: linear-gradient(135deg, #FF2E63, #F9A826);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,.05));
+  --shadow-sm: 0 2px 8px rgba(13,2,33,.06);
+  --shadow-md: 0 8px 30px rgba(13,2,33,.1);
+  --shadow-lg: 0 20px 60px rgba(13,2,33,.15);
+  --shadow-xl: 0 25px 80px rgba(13,2,33,.2);
+  --shadow-glow: 0 0 40px rgba(123,47,190,.2);
+  --shadow-coral: 0 0 40px rgba(255,46,99,.15);
+  --radius: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
+  --font-titulo: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  --font-sub: 'Plus Jakarta Sans', 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+  --transition-slow: .6s cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--background);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+.breadcrumb-jm {
+  background: var(--background-soft);
+  padding: 14px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+.breadcrumb-jm .breadcrumb {
+  margin: 0;
+  font-size: .88rem;
+}
+.breadcrumb-jm .breadcrumb-item a {
+  color: var(--primary-purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+.breadcrumb-jm .breadcrumb-item a:hover { color: var(--primary-coral); }
+.breadcrumb-jm .breadcrumb-item.active { color: var(--text-gray); font-weight: 500; }
+.breadcrumb-jm .breadcrumb-item + .breadcrumb-item::before {
+  content: '›';
+  color: var(--text-gray);
+}
+
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--primary-coral);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 99999;
+  font-weight: 700;
+}
+.skip-link:focus { left: 0; }
+
+/* =========================================================
+   TITULOS
+   ========================================================= */
+.titulo-seccion {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--primary-deep);
+}
+.subtitulo-seccion {
+  font-family: var(--font-sub);
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-brand);
+  border-radius: 4px;
+  margin: 16px auto 20px;
+  position: relative;
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(249,168,38,.4);
+}
+
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
+.bg-gradient-brand { background: var(--gradient-brand); }
+.bg-gradient-purple { background: var(--gradient-purple); }
+.text-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

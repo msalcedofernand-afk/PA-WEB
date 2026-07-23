@@ -1,0 +1,71 @@
+/* ==================================================== FOOTER - Pie de Página ==================================================== */
+
+.footer-jm {
+  background: var(--primary-deep);
+  color: #94a3b8;
+  position: relative;
+}
+.footer-jm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-brand);
+}
+.footer-jm h5 {
+  font-family: var(--font-titulo);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.footer-jm a {
+  color: #94a3b8;
+  transition: color .2s ease, padding-left .2s ease;
+}
+.footer-jm a:hover {
+  color: var(--primary-coral);
+  padding-left: 4px;
+}
+.footer-copy { border-top: 1px solid #334155; color: #64748b; }
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+}
+.footer-social a:hover {
+  background: var(--primary-coral);
+  transform: translateY(-3px);
+  padding-left: 0;
+}
+.footer-social a svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+.footer-metodos-pago {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.footer-metodos-pago .metodo-pago {
+  background: rgba(255,255,255,.08);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .03em;
+}

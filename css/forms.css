@@ -1,0 +1,68 @@
+/* ==================================================== FORMS - Estilos de Formulario y Checks ==================================================== */
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+.form-jm .form-control,
+.form-jm .form-select {
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  font-family: var(--font-body);
+}
+.form-jm .form-control:focus,
+.form-jm .form-select:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(123,47,190,.12);
+}
+.form-jm .form-control.is-invalid {
+  border-color: var(--primary-coral);
+  box-shadow: 0 0 0 3px rgba(255,46,99,.12);
+}
+.form-jm .form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: .9rem;
+}
+
+/* =========================================================
+   FORMULARIO MEJORADO - CHECKS DE PRODUCTOS
+   ========================================================= */
+.productos-check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.producto-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--background-soft);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-size: .88rem;
+  font-weight: 500;
+}
+.producto-check:hover {
+  border-color: var(--primary-purple);
+  background: rgba(123,47,190,.04);
+}
+.producto-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-coral);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.producto-check input[type="checkbox"]:checked + span {
+  font-weight: 700;
+  color: var(--primary-coral);
+}
+.producto-check:has(input:checked) {
+  border-color: var(--primary-coral);
+  background: rgba(255,46,99,.05);
+}

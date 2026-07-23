@@ -1,0 +1,127 @@
+/* ==================================================== FLOATING - WhatsApp, Volver Arriba, Barra de Anuncio ==================================================== */
+
+/* =========================================================
+   WHATSAPP FLOTANTE
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9998;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4);
+  transition: all .3s ease;
+  text-decoration: none;
+  animation: pulse-whatsapp 2s infinite;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37,211,102,.5);
+  color: #fff;
+}
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+}
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,.4); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text-dark);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================================
+   BOTON VOLVER ARRIBA
+   ========================================================= */
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 9998;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(123,47,190,.3);
+  transition: all .4s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  cursor: pointer;
+}
+.btn-volver-arriba.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.btn-volver-arriba:hover {
+  background: var(--primary-coral);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(255,46,99,.3);
+}
+.btn-volver-arriba svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =========================================================
+   BARRA DE ANUNCIO (jQuery slideDown)
+   ========================================================= */
+.barra-anuncio {
+  background: var(--gradient-brand);
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: .85rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1000;
+}
+.barra-anuncio .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.barra-anuncio button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: .8;
+  transition: var(--transition);
+}
+.barra-anuncio button:hover { opacity: 1; transform: scale(1.2); }

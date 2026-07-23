@@ -1,0 +1,82 @@
+/* ==================================================== FAQ - Preguntas Frecuentes, Tooltip y Resultados jQuery ==================================================== */
+
+/* =========================================================
+   FAQ / PREGUNTAS FRECUENTES (jQuery Acordeon)
+   ========================================================= */
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.faq-item:hover { border-color: var(--primary-purple); }
+.faq-pregunta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sub);
+  color: var(--text-dark);
+  transition: var(--transition);
+  user-select: none;
+}
+.faq-pregunta:hover { background: var(--background-soft); }
+.faq-pregunta.activa { color: var(--primary-purple); background: linear-gradient(135deg, rgba(123,47,190,.06), rgba(168,85,247,.06)); }
+.faq-icono {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-coral);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(227, 6, 19, .08);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.faq-pregunta.activa .faq-icono { background: var(--primary-purple); color: #fff; }
+.faq-respuesta {
+  display: none;
+  padding: 0 20px 16px;
+  color: var(--text-gray);
+  line-height: 1.7;
+  font-size: .95rem;
+}
+.faq-respuesta p { margin: 0; }
+
+/* =========================================================
+   TOOLTIP jQuery en tarjetas de producto
+   ========================================================= */
+.tooltip-jq {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-purple);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: .7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+}
+
+/* =========================================================
+   RESULTADOS DE BUSQUEDA jQuery
+   ========================================================= */
+#resultadosBusquedajQuery {
+  display: none;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--primary-purple);
+  font-weight: 500;
+  margin-top: 8px;
+}

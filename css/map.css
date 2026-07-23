@@ -1,0 +1,74 @@
+/* ==================================================== MAP - Mapa, Datos de Contacto, Mensaje de Éxito ==================================================== */
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+.mapa-contenedor {
+  border: 2px dashed var(--primary-purple);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 280px;
+}
+.mapa-contenedor iframe { width: 100%; height: 280px; border: 0; }
+
+/* =========================================================
+   DATOS CONTACTO
+   ========================================================= */
+.dato-contacto {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: var(--background-soft);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  transition: all .3s ease;
+  border: 2px solid transparent;
+}
+.dato-contacto:hover {
+  background: rgba(123,47,190,.04);
+  border-color: var(--primary-purple);
+  transform: translateX(4px);
+}
+.dato-contacto .dato-icono {
+  width: 44px;
+  height: 44px;
+  background: var(--background);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid #f0f0f0;
+  transition: all .3s ease;
+}
+.dato-contacto .dato-icono svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--primary-purple);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.dato-contacto:hover .dato-icono {
+  background: var(--gradient-brand);
+  border-color: transparent;
+}
+.dato-contacto:hover .dato-icono svg {
+  stroke: #fff;
+}
+
+/* =========================================================
+   MENSAJE EXITO
+   ========================================================= */
+.mensaje-exito {
+  display: none;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(34,197,94,.08);
+  color: #16a34a;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid rgba(34,197,94,.2);
+}
+.mensaje-exito.visible { display: block; animation: fadeInUp .4s ease; }

@@ -1,0 +1,116 @@
+/* ==================================================== HERO - Sección Hero con Parallax ==================================================== */
+
+.hero-section {
+  background: var(--gradient-dark);
+  color: #fff;
+  padding: 130px 0 150px;
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+.hero-section .hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/hero-nuevo.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: .35;
+  z-index: 0;
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(123,47,190,.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,46,99,.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+  z-index: 1;
+}
+.hero-section h1 {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  text-shadow: 0 4px 30px rgba(0,0,0,.3);
+}
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: .95;
+  max-width: 600px;
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.hero-section .hero-sub {
+  font-family: var(--font-sub);
+  font-size: .95rem;
+  opacity: .8;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.hero-botones { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* =========================================================
+   PAGINA INTERNA HERO
+   ========================================================= */
+.page-hero {
+  background: var(--gradient-brand);
+  color: #fff;
+  padding: 60px 0 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.page-hero h1 {
+  font-family: var(--font-titulo);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 10px;
+}
+.page-hero p {
+  opacity: .85;
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+}

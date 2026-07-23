@@ -1,0 +1,95 @@
+/* ==================================================== NAVBAR - Navegación y Búsqueda ==================================================== */
+
+.navbar {
+  transition: all .4s ease !important;
+  padding: 12px 0;
+  background: rgba(255,255,255,.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.navbar.scrolled {
+  padding: 8px 0;
+  box-shadow: 0 4px 30px rgba(13,2,33,.1) !important;
+}
+.navbar-brand {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--primary-deep) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform .3s ease;
+}
+.navbar-brand:hover { transform: scale(1.03); }
+.navbar-brand img {
+  height: 42px;
+  width: auto;
+}
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: var(--text-dark) !important;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: all var(--transition);
+  font-size: .95rem;
+  position: relative;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  transition: all .3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--primary-coral) !important;
+}
+.navbar-nav .nav-link.active {
+  color: var(--primary-coral) !important;
+}
+.navbar-toggler {
+  border: 2px solid var(--primary-purple);
+  padding: 4px 8px;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%237B2FBE' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---- BUSQUEDA NAVBAR ---- */
+.nav-busqueda {
+  position: relative;
+}
+.nav-busqueda input {
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-pill);
+  padding: 8px 16px 8px 38px;
+  font-size: .85rem;
+  font-family: var(--font-body);
+  transition: all .3s ease;
+  width: 180px;
+}
+.nav-busqueda input:focus {
+  border-color: var(--primary-coral);
+  box-shadow: 0 0 0 3px rgba(255,46,99,.1);
+  width: 220px;
+  outline: none;
+}
+.nav-busqueda .icono-busqueda {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--text-gray);
+}

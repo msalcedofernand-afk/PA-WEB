@@ -1,0 +1,339 @@
+/* ==================================================== SECTIONS - Contadores, Carousel, Marcas, Testimonios, Newsletter, Pasos, Canvas ==================================================== */
+
+/* =========================================================
+   CONTADORES / ESTADISTICAS
+   ========================================================= */
+.seccion-contadores {
+  background: var(--gradient-dark);
+  color: #fff;
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+.seccion-contadores::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(123,47,190,.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.seccion-contadores::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255,46,99,.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.contador-item {
+  text-align: center;
+  padding: 20px;
+}
+.contador-numero {
+  font-family: var(--font-titulo);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #fff, #F9A826);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.contador-numero .contador-simbolo {
+  font-size: .6em;
+  opacity: .8;
+}
+.contador-label {
+  font-family: var(--font-sub);
+  font-size: .95rem;
+  opacity: .85;
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+.contador-linea {
+  width: 40px;
+  height: 3px;
+  background: rgba(255,255,255,.4);
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* =========================================================
+   CAROUSEL / SLIDER
+   ========================================================= */
+.carousel-jm .carousel-item {
+  transition: transform .6s ease-in-out;
+}
+.carousel-jm .carousel-indicators [data-bs-target] {
+  background-color: var(--primary-coral);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+}
+.carousel-jm .carousel-indicators .active {
+  background-color: var(--primary-purple);
+  transform: scale(1.2);
+}
+.carousel-jm .carousel-control-prev-icon,
+.carousel-jm .carousel-control-next-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 50%;
+  padding: 12px;
+  transition: all .3s ease;
+}
+.carousel-jm .carousel-control-prev-icon:hover,
+.carousel-jm .carousel-control-next-icon:hover {
+  background-color: var(--primary-coral);
+}
+.carousel-slide {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.carousel-slide .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(123,47,190,.85) 0%, rgba(255,46,99,.7) 100%);
+  display: flex;
+  align-items: center;
+}
+.carousel-slide .slide-content {
+  padding: 50px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+}
+.carousel-slide .slide-content h2 {
+  font-family: var(--font-titulo);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.carousel-slide .slide-content p {
+  font-size: 1.05rem;
+  opacity: .9;
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   MARCAS / PROVEEDORES
+   ========================================================= */
+.seccion-marcas {
+  padding: 50px 0;
+  background: var(--background);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.marca-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: .5;
+  filter: grayscale(100%);
+  transition: all .4s ease;
+}
+.marca-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+.marca-item img {
+  max-height: 50px;
+  width: auto;
+}
+.marca-item .marca-placeholder {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text-gray);
+  letter-spacing: .02em;
+}
+
+/* =========================================================
+   TESTIMONIOS
+   ========================================================= */
+.seccion-testimonios {
+  background: var(--background-soft);
+  padding: 80px 0;
+}
+.testimonio-card {
+  background: var(--background-card);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: all .4s ease;
+  height: 100%;
+  border: 1px solid rgba(123,47,190,.06);
+}
+.testimonio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+.testimonio-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: .2;
+  line-height: 1;
+}
+.testimonio-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+.testimonio-stars svg {
+  width: 16px;
+  height: 16px;
+  fill: #f59e0b;
+  stroke: none;
+}
+.testimonio-texto {
+  font-style: italic;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: .95rem;
+}
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.testimonio-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--background-soft);
+}
+.testimonio-avatar-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  font-family: var(--font-titulo);
+  flex-shrink: 0;
+}
+.testimonio-nombre {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: .95rem;
+}
+.testimonio-cargo {
+  font-size: .8rem;
+  color: var(--text-gray);
+}
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+.seccion-newsletter {
+  background: var(--gradient-purple);
+  padding: 60px 0;
+  color: #fff;
+}
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: .95rem;
+  outline: none;
+}
+.newsletter-form button {
+  background: var(--primary-coral);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all .3s ease;
+  white-space: nowrap;
+}
+.newsletter-form button:hover {
+  background: var(--text-dark);
+}
+
+/* =========================================================
+   PASOS
+   ========================================================= */
+.paso-numero {
+  width: 56px;
+  height: 56px;
+  background: var(--gradient-brand);
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-family: var(--font-titulo);
+  box-shadow: 0 4px 14px rgba(123,47,190,.2);
+}
+.card-paso {
+  background: var(--background);
+  border: 2px solid #f0f0f0;
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: all .4s ease;
+}
+.card-paso:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-purple);
+}
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+.grafico-contenedor {
+  background: var(--background);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 30px;
+}
+canvas { max-width: 100%; border-radius: 12px; }
