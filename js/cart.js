@@ -374,3 +374,34 @@ onReady(function () {
       });
     });
   }
+
+
+  // Universal Robust Modal Close Handler (X button + Click Outside Backdrop)
+  var modalEl = document.getElementById('modalDetalleProducto');
+  if (modalEl) {
+    function cerrarModalDetalle() {
+      if (typeof bootstrap !== 'undefined') {
+        var bsModal = bootstrap.Modal.getInstance(modalEl);
+        if (bsModal) {
+          try { bsModal.hide(); } catch (e) {}
+        }
+      }
+      modalEl.classList.remove('show');
+      modalEl.style.display = 'none';
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      var backdrops = document.querySelectorAll('.modal-backdrop');
+      backdrops.forEach(function (b) { b.remove(); });
+    }
+
+    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
+      btn.addEventListener('click', cerrarModalDetalle);
+    });
+
+    modalEl.addEventListener('click', function (e) {
+      if (e.target === modalEl) {
+        cerrarModalDetalle();
+      }
+    });
+  }

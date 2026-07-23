@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
   <!-- Custom -->
-  <link rel="stylesheet" href="css/main.css?v=1.3">
+  <link rel="stylesheet" href="css/main.css?v=1.4">
 
   <!-- Schema.org JSON-LD - LocalBusiness -->
   <script type="application/ld+json">
@@ -970,16 +970,16 @@
     </div>
   </div>
 <!-- MODAL DETALLE DE PRODUCTO -->
-<div class="modal fade" id="modalDetalleProducto" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="modalDetalleProducto" tabindex="-1" aria-labelledby="modalProductoNombre" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content border-0 shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden;">
+    <div class="modal-content border-0 shadow-lg">
       <div class="modal-header border-0 pb-0">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body p-4 pt-0">
         <div class="row g-4 align-items-center">
           <div class="col-md-5 text-center">
-            <img id="modalProductoImg" src="" alt="" class="img-fluid rounded-4 shadow-sm" style="max-height: 250px; object-fit: contain;">
+            <img id="modalProductoImg" src="" alt="" class="img-fluid rounded-4 shadow-sm">
           </div>
           <div class="col-md-7">
             <span id="modalProductoCategoria" class="badge-categoria mb-2 d-inline-block">Abarrotes</span>
@@ -1002,6 +1002,7 @@
     </div>
   </div>
 </div>
+
 
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.7.1.min.js"></script>
