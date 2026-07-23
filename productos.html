@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css?v=1.4">
+  <link rel="stylesheet" href="css/main.css?v=1.5">
   <link rel="canonical" href="https://jrdistribuciones.com/productos.html">
 </head>
 <body>
@@ -101,15 +101,18 @@
           <input type="text" id="busquedaProductos" placeholder="Buscar producto..." style="width:100%;" aria-label="Buscar productos">
         </div>
       </div>
-      <div class="col-md-6 text-md-end">
-        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
-        <button class="filtro-btn" data-filtro="abarrotes">Abarrotes</button>
-        <button class="filtro-btn" data-filtro="lácteos">Lácteos</button>
-        <button class="filtro-btn" data-filtro="embutidos">Embutidos</button>
-        <button class="filtro-btn" data-filtro="bebidas">Bebidas</button>
-        <button class="filtro-btn" data-filtro="helados">Helados</button>
-        <button class="filtro-btn" data-filtro="limpieza">Limpieza</button>
-      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-md-end justify-content-start gap-2">
+            <label for="filtroCategoriaSelect" class="fw-bold text-dark small text-nowrap"><i class="bi bi-funnel-fill"></i> Categoría:</label>
+            <select class="form-select select-categoria-jm" id="filtroCategoriaSelect" aria-label="Filtrar por Categoría">
+              <option value="todos" selected>📦 Todas las Categorías</option>
+              <option value="abarrotes">🌾 Abarrotes</option>
+              <option value="lácteos">🥛 Lácteos</option>
+              <option value="embutidos">🌭 Embutidos</option>
+              <option value="bebidas">🥤 Bebidas y Licores</option>
+              <option value="helados">🍦 Helados</option>
+              <option value="limpieza">🧹 Limpieza</option>
+            </select>
+          </div>
     </div>
 
     <div id="sinResultados" style="display:none;" class="text-center py-5">

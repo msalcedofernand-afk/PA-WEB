@@ -725,6 +725,35 @@ onReady(function () {
         paginaActual = 1;
         renderPagina();
 
+  // Listener para el desplegable de Selección de Categoría
+  var filtroSelect = document.getElementById('filtroCategoriaSelect');
+  if (filtroSelect) {
+    filtroSelect.addEventListener('change', function () {
+      var categoria = this.value;
+      var productosAll = document.querySelectorAll('.producto');
+      paginaActual = 1;
+      
+      if (categoria === 'todos') {
+        productosFiltrados = Array.from(productosAll);
+      } else {
+        productosFiltrados = Array.from(productosAll).filter(function (prod) {
+          return prod.getAttribute('data-categoria') === categoria;
+        });
+      }
+      
+      var busquedaInput = document.getElementById('busquedaProductos');
+      if (busquedaInput && busquedaInput.value.trim() !== '') {
+        var query = busquedaInput.value.toLowerCase().trim();
+        productosFiltrados = productosFiltrados.filter(function (prod) {
+          return prod.getAttribute('data-nombre').indexOf(query) !== -1;
+        });
+      }
+      
+      renderPagina();
+    });
+  }
+
+
   // Grid / List View Toggle Handler
   var btnGrid = document.getElementById('btnVistaGrid');
   var btnList = document.getElementById('btnVistaList');

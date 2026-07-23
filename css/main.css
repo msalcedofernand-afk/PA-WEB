@@ -2545,3 +2545,81 @@ canvas { max-width: 100%; border-radius: 12px; }
   width: auto;
   min-width: 220px;
 }
+
+/* =========================================================
+   DESPLEGABLE DE CATEGORÍA (SELECT) Y FAQ ACCORDION
+   ========================================================= */
+
+.select-categoria-jm {
+  background-color: #ffffff !important;
+  color: var(--text-dark) !important;
+  border: 2px solid rgba(123,47,190,.25) !important;
+  border-radius: 30px !important;
+  padding: 9px 38px 9px 18px !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05) !important;
+  transition: all .25s ease !important;
+  font-family: var(--font-body) !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237b2fbe' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 14px 12px !important;
+  min-width: 220px;
+}
+
+.select-categoria-jm:focus, .select-categoria-jm:hover {
+  border-color: var(--primary-purple) !important;
+  box-shadow: 0 4px 18px rgba(123,47,190,.25) !important;
+  outline: none !important;
+}
+
+.faq-wrapper {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: 0 12px 40px rgba(13,2,33,.08);
+  border: 1px solid #f1f5f9;
+}
+
+.faq-accordion .accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.03);
+  transition: all .25s ease;
+}
+
+.faq-accordion .accordion-item:hover {
+  border-color: rgba(123,47,190,.3);
+}
+
+.faq-accordion .accordion-button {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: #ffffff;
+  padding: 18px 24px;
+  font-family: var(--font-titulo);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(123,47,190,.05);
+  color: var(--primary-purple);
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-body {
+  padding: 16px 24px 22px;
+  color: #475569;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
