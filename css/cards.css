@@ -149,10 +149,10 @@
   gap: 4px;
 }
 
-/* Botones de producto centrados */
+/* Botones de producto centrados con altura idéntica */
 .card-producto .card-btns {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 8px;
   margin-top: 14px;
@@ -160,25 +160,27 @@
 }
 .card-producto .btn-agregar-carrito,
 .card-producto .btn-ver-detalle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 1;
-  padding: 10px 12px;
+  box-sizing: border-box;
+  height: 38px;
+  padding: 0 12px;
   border-radius: 10px;
   font-size: .8rem;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
   transition: all .3s cubic-bezier(.4,0,.2,1);
 }
 .card-producto .btn-agregar-carrito {
   flex: 1.5;
   background: var(--primary-coral);
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 .card-producto .btn-agregar-carrito:hover {
   background: #e0264f;
@@ -210,6 +212,7 @@
 .card-producto .btn-ver-detalle svg {
   margin-right: 5px;
   flex-shrink: 0;
+  display: inline-block;
   vertical-align: middle;
 }
 
