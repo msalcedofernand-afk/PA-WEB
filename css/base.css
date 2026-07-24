@@ -1,4 +1,3 @@
-/* ==================================================== BASE - Variables, Reset, Tipografías, Utilidades ==================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -50,9 +49,6 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================================================
-   BREADCRUMB
-   ========================================================= */
 .breadcrumb-jm {
   background: var(--background-soft);
   padding: 14px 0;
@@ -76,9 +72,6 @@ body {
   color: var(--text-gray);
 }
 
-/* =========================================================
-   SKIP LINK
-   ========================================================= */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -91,9 +84,6 @@ body {
 }
 .skip-link:focus { left: 0; }
 
-/* =========================================================
-   TITULOS
-   ========================================================= */
 .titulo-seccion {
   font-family: var(--font-titulo);
   font-weight: 800;
@@ -127,9 +117,6 @@ body {
   box-shadow: 0 0 12px rgba(249,168,38,.4);
 }
 
-/* =========================================================
-   UTILIDADES
-   ========================================================= */
 .bg-gradient-brand { background: var(--gradient-brand); }
 .bg-gradient-purple { background: var(--gradient-purple); }
 .text-gradient {

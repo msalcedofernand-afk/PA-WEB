@@ -1,4 +1,3 @@
-/* ==================================================== ANIMATIONS - Scroll Reveal & Keyframes ==================================================== */
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -21,7 +20,6 @@
 .anim-delay-3 { animation-delay: .3s; }
 .anim-delay-4 { animation-delay: .4s; }
 
-/* Reveal elements are visible by default to prevent blank screens */
 .reveal, .reveal-left, .reveal-right {
   opacity: 1;
   transform: translate(0, 0);

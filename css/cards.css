@@ -1,8 +1,4 @@
-/* ==================================================== CARDS - Tarjetas, Productos, Filtros, Iconos, Valores ==================================================== */
 
-/* =========================================================
-   TARJETAS
-   ========================================================= */
 .card-jm {
   border: 1px solid rgba(123,47,190,.06);
   border-radius: var(--radius-lg);
@@ -49,9 +45,6 @@
 .card-jm-morado { border-top: 4px solid var(--primary-purple); }
 .card-jm-morado::before { background: linear-gradient(135deg, rgba(123,47,190,.04) 0%, transparent 100%); }
 
-/* =========================================================
-   PRODUCTO
-   ========================================================= */
 .card-producto {
   border: 1px solid rgba(123,47,190,.06);
   border-radius: var(--radius-lg);
@@ -149,7 +142,6 @@
   gap: 4px;
 }
 
-/* Botones de producto centrados con altura idéntica */
 .card-producto .card-btns {
   display: flex;
   align-items: stretch;
@@ -178,6 +170,8 @@
 }
 .card-producto .btn-agregar-carrito {
   flex: 1.5;
+  width: auto;
+  margin-top: 0;
   background: var(--primary-coral);
   color: #ffffff;
   border: 1px solid transparent;
@@ -216,9 +210,6 @@
   vertical-align: middle;
 }
 
-/* =========================================================
-   FILTROS
-   ========================================================= */
 .filtros-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -248,9 +239,6 @@
   box-shadow: 0 4px 14px rgba(123,47,190,.3);
 }
 
-/* =========================================================
-   ICONOS SVG
-   ========================================================= */
 .icono-svg {
   width: 52px;
   height: 52px;
@@ -269,9 +257,6 @@
 .icono-svg-morado { color: var(--primary-purple); }
 .icono-svg-grande { width: 64px; height: 64px; }
 
-/* =========================================================
-   VALORES
-   ========================================================= */
 .card-valor {
   background: var(--background);
   border: 2px solid #f0f0f0;
@@ -321,9 +306,6 @@
 }
 .card-valor p { color: var(--text-gray); font-size: .87rem; margin: 0; }
 
-/* =========================================================
-   PAGINACION
-   ========================================================= */
 .paginacion {
   display: flex;
   justify-content: center;

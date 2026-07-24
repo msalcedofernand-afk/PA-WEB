@@ -8,12 +8,10 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== SCROLL - Scroll Reveal + Back to Top ==================================================== */
-
 onReady(function () {
 
   var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  
+
   revealElements.forEach(function (el) {
     el.classList.add('visible');
   });

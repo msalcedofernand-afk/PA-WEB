@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== CART - Complete Cart System + Toast + Max Limit ==================================================== */
-
 onReady(function () {
 
   var MAX_CANTIDAD_PRODUCTO = 50;
@@ -356,8 +354,6 @@ onReady(function () {
 
 });
 
-
-  // Ensure modal X close button works 100% cleanly
   var modalEl = document.getElementById('modalDetalleProducto');
   if (modalEl) {
     modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
@@ -372,36 +368,5 @@ onReady(function () {
         var backdrop = document.querySelector('.modal-backdrop');
         if (backdrop) backdrop.remove();
       });
-    });
-  }
-
-
-  // Universal Robust Modal Close Handler (X button + Click Outside Backdrop)
-  var modalEl = document.getElementById('modalDetalleProducto');
-  if (modalEl) {
-    function cerrarModalDetalle() {
-      if (typeof bootstrap !== 'undefined') {
-        var bsModal = bootstrap.Modal.getInstance(modalEl);
-        if (bsModal) {
-          try { bsModal.hide(); } catch (e) {}
-        }
-      }
-      modalEl.classList.remove('show');
-      modalEl.style.display = 'none';
-      document.body.classList.remove('modal-open');
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-      var backdrops = document.querySelectorAll('.modal-backdrop');
-      backdrops.forEach(function (b) { b.remove(); });
-    }
-
-    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
-      btn.addEventListener('click', cerrarModalDetalle);
-    });
-
-    modalEl.addEventListener('click', function (e) {
-      if (e.target === modalEl) {
-        cerrarModalDetalle();
-      }
     });
   }

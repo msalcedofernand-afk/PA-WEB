@@ -1,14 +1,10 @@
-/* ==================================================== CART - Botón, Flotante y Panel del Carrito ==================================================== */
 
-/* =========================================================
-   BOTON AGREGAR AL CARRITO
-   ========================================================= */
 .btn-agregar-carrito {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0;
+  margin-top: 12px;
   padding: 10px 16px;
   background: var(--primary-coral);
   color: #fff;
@@ -34,9 +30,6 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   CARRITO FLOTANTE (BOTON)
-   ========================================================= */
 .carrito-float {
   position: fixed;
   bottom: 28px;
@@ -84,9 +77,6 @@
   line-height: 1;
 }
 
-/* =========================================================
-   CARRITO PANEL LATERAL
-   ========================================================= */
 .carrito-overlay {
   position: fixed;
   inset: 0;
@@ -290,9 +280,6 @@
   font-family: var(--font-titulo);
 }
 
-/* =========================================================
-   BARRA DE ENVIO GRATIS Y VACIAR CARRITO
-   ========================================================= */
 .carrito-envio-gratis {
   padding: 12px 24px;
   background: #f8fafc;
@@ -334,4 +321,3 @@
   color: var(--primary-coral);
   background: rgba(255,46,99,.1);
 }
-

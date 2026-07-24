@@ -1,8 +1,4 @@
-/* ==================================================== SECTIONS - Contadores, Carousel, Marcas, Testimonios, Newsletter, Pasos, Canvas ==================================================== */
 
-/* =========================================================
-   CONTADORES / ESTADISTICAS
-   ========================================================= */
 .seccion-contadores {
   background: var(--gradient-dark);
   color: #fff;
@@ -64,9 +60,6 @@
   border-radius: 3px;
 }
 
-/* =========================================================
-   CAROUSEL / SLIDER
-   ========================================================= */
 .carousel-jm .carousel-item {
   transition: transform .6s ease-in-out;
 }
@@ -152,9 +145,6 @@
   margin-bottom: 24px;
 }
 
-/* =========================================================
-   MARCAS / PROVEEDORES
-   ========================================================= */
 .seccion-marcas {
   padding: 50px 0;
   background: var(--background);
@@ -209,9 +199,6 @@
   letter-spacing: .02em;
 }
 
-/* =========================================================
-   TESTIMONIOS
-   ========================================================= */
 .seccion-testimonios {
   background: var(--background-soft);
   padding: 80px 0;
@@ -298,9 +285,6 @@
   color: var(--text-gray);
 }
 
-/* =========================================================
-   NEWSLETTER
-   ========================================================= */
 .seccion-newsletter {
   background: var(--gradient-purple);
   padding: 60px 0;
@@ -337,9 +321,6 @@
   background: var(--text-dark);
 }
 
-/* =========================================================
-   PASOS
-   ========================================================= */
 .paso-numero {
   width: 56px;
   height: 56px;
@@ -369,9 +350,6 @@
   border-color: var(--primary-purple);
 }
 
-/* =========================================================
-   CANVAS
-   ========================================================= */
 .grafico-contenedor {
   background: var(--background);
   border: none;
@@ -381,9 +359,6 @@
 }
 canvas { max-width: 100%; border-radius: 12px; }
 
-/* =========================================================
-   COMO FUNCIONA - 4 PASOS
-   ========================================================= */
 .paso-circulo {
   width: 72px;
   height: 72px;
@@ -405,9 +380,6 @@ canvas { max-width: 100%; border-radius: 12px; }
   box-shadow: 0 12px 32px rgba(123,47,190,.4);
 }
 
-/* =========================================================
-   BADGES DE CONFIANZA
-   ========================================================= */
 .badge-confianza-item {
   display: flex;
   align-items: center;
@@ -434,9 +406,6 @@ canvas { max-width: 100%; border-radius: 12px; }
   flex-shrink: 0;
 }
 
-/* =========================================================
-   BREADCRUMBS
-   ========================================================= */
 .breadcrumb-jm {
   background: transparent;
   padding: 0;

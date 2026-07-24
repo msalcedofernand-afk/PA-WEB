@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== COUNTERS - Animated Counters ==================================================== */
-
 onReady(function () {
 
   var contadores = document.querySelectorAll('.contador-numero[data-objetivo]');
@@ -36,7 +34,7 @@ onReady(function () {
     function paso(timestamp) {
       if (!startTime) startTime = timestamp;
       var progreso = Math.min((timestamp - startTime) / duracion, 1);
-      // Easing: easeOutCubic
+
       var eased = 1 - Math.pow(1 - progreso, 3);
       var valorActual = Math.floor(eased * objetivo);
       el.innerHTML = valorActual.toLocaleString('es-PE') + '<span class="contador-simbolo">' + simbolo + '</span>';

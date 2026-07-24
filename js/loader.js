@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== LOADER - Fast Page Loader ==================================================== */
-
 (function () {
   function ocultarLoader() {
     var loader = document.querySelector('.page-loader');
@@ -31,6 +29,5 @@ function onReady(fn) {
     ocultarLoader();
   });
 
-  // Safety fallback
   setTimeout(ocultarLoader, 1000);
 })();

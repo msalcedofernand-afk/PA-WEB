@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== NAVBAR - Scroll Effect + Mobile Close ==================================================== */
-
 onReady(function () {
 
   var navbar = document.querySelector('.navbar');

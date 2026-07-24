@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== FORMS - Contact Form Validation ==================================================== */
-
 onReady(function () {
 
   var form = document.getElementById('formContacto');

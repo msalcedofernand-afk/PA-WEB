@@ -8,15 +8,12 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== CANVAS - Graph with High DPI ==================================================== */
-
 onReady(function () {
 
   var canvas = document.getElementById('graficoCategorias');
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    
-    // Set internal resolution
+
     canvas.width = 560;
     canvas.height = 300;
 

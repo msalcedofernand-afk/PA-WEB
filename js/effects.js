@@ -8,8 +8,6 @@ function onReady(fn) {
   }
 }
 
-/* ==================================================== EFFECTS - Newsletter + Parallax + Tooltips + Liquidacion Modal ==================================================== */
-
 onReady(function () {
 
   var newsletterForm = document.getElementById('formNewsletter');
@@ -57,7 +55,6 @@ onReady(function () {
     });
   });
 
-  // --- Persistence for Barra Anuncio ---
   var barraAnuncio = document.getElementById('barraAnuncio');
   var btnCerrarAnuncio = document.getElementById('barraAnuncioCerrar');
   if (barraAnuncio) {

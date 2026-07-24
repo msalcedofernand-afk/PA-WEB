@@ -1,8 +1,4 @@
-/* ==================================================== FAQ - Preguntas Frecuentes, Tooltip y Resultados jQuery ==================================================== */
 
-/* =========================================================
-   FAQ / PREGUNTAS FRECUENTES (jQuery Acordeon)
-   ========================================================= */
 .faq-item {
   border: 1px solid #e5e7eb;
   border-radius: var(--radius);
@@ -49,9 +45,6 @@
 }
 .faq-respuesta p { margin: 0; }
 
-/* =========================================================
-   TOOLTIP jQuery en tarjetas de producto
-   ========================================================= */
 .tooltip-jq {
   position: absolute;
   bottom: 8px;
@@ -69,9 +62,6 @@
   display: none;
 }
 
-/* =========================================================
-   RESULTADOS DE BUSQUEDA jQuery
-   ========================================================= */
 #resultadosBusquedajQuery {
   display: none;
   text-align: center;

@@ -1,8 +1,4 @@
-/* ==================================================== FLOATING - WhatsApp, Volver Arriba, Barra de Anuncio ==================================================== */
 
-/* =========================================================
-   WHATSAPP FLOTANTE
-   ========================================================= */
 .whatsapp-float {
   position: fixed;
   bottom: 28px;
@@ -56,9 +52,6 @@
   visibility: visible;
 }
 
-/* =========================================================
-   BOTON VOLVER ARRIBA
-   ========================================================= */
 .btn-volver-arriba {
   position: fixed;
   bottom: 28px;
@@ -95,9 +88,6 @@
   height: 22px;
 }
 
-/* =========================================================
-   BARRA DE ANUNCIO (jQuery slideDown)
-   ========================================================= */
 .barra-anuncio {
   background: var(--gradient-brand);
   color: #fff;

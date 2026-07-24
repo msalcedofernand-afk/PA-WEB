@@ -1,8 +1,4 @@
-/* ==================================================== FORMS - Estilos de Formulario y Checks ==================================================== */
 
-/* =========================================================
-   FORMULARIO
-   ========================================================= */
 .form-jm .form-control,
 .form-jm .form-select {
   border: 2px solid #e2e8f0;
@@ -26,9 +22,6 @@
   font-size: .9rem;
 }
 
-/* =========================================================
-   FORMULARIO MEJORADO - CHECKS DE PRODUCTOS
-   ========================================================= */
 .productos-check-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

@@ -1,6 +1,3 @@
-/* ====================================================
-   JR DISTRIBUCIONES - UNIFIED RELIABLE SCRIPT (js/main.js)
-   ==================================================== */
 
 function onReady(fn) {
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
@@ -11,11 +8,6 @@ function onReady(fn) {
     });
   }
 }
-
-
-/* --- loader.js --- */
-
-/* ==================================================== LOADER - Fast Page Loader ==================================================== */
 
 (function () {
   function ocultarLoader() {
@@ -38,14 +30,8 @@ function onReady(fn) {
     ocultarLoader();
   });
 
-  // Safety fallback
   setTimeout(ocultarLoader, 1000);
 })();
-
-
-/* --- navbar.js --- */
-
-/* ==================================================== NAVBAR - Scroll Effect + Mobile Close ==================================================== */
 
 onReady(function () {
 
@@ -74,11 +60,6 @@ onReady(function () {
   }
 
 });
-
-
-/* --- forms.js --- */
-
-/* ==================================================== FORMS - Contact Form Validation ==================================================== */
 
 onReady(function () {
 
@@ -121,19 +102,34 @@ onReady(function () {
         aviso.classList.add('visible');
         form.reset();
         form.querySelectorAll('.is-valid').forEach(function (el) { el.classList.remove('is-valid'); });
+        if (typeof actualizarCamposContacto === 'function') actualizarCamposContacto();
         setTimeout(function () { aviso.classList.remove('visible'); }, 6000);
       } else {
         aviso.classList.remove('visible');
       }
     });
+
+    var tipoConsulta = document.getElementById('tipoConsulta');
+    var metodoEntrega = document.getElementById('metodoEntrega');
+    var campoMetodoEntrega = document.getElementById('campoMetodoEntrega');
+    var campoZona = document.getElementById('campoZona');
+    var campoProductosInteres = document.getElementById('campoProductosInteres');
+
+    function actualizarCamposContacto() {
+      var esConsultaGeneral = tipoConsulta && tipoConsulta.value === 'Consulta general';
+      var esRetiroTienda = metodoEntrega && metodoEntrega.value === 'Retiro en tienda';
+
+      if (campoMetodoEntrega) campoMetodoEntrega.style.display = esConsultaGeneral ? 'none' : '';
+      if (campoProductosInteres) campoProductosInteres.style.display = esConsultaGeneral ? 'none' : '';
+      if (campoZona) campoZona.style.display = (esConsultaGeneral || esRetiroTienda) ? 'none' : '';
+    }
+
+    if (tipoConsulta) tipoConsulta.addEventListener('change', actualizarCamposContacto);
+    if (metodoEntrega) metodoEntrega.addEventListener('change', actualizarCamposContacto);
+    actualizarCamposContacto();
   }
 
 });
-
-
-/* --- products.js --- */
-
-/* ==================================================== PRODUCTS - Dynamic Filter + Search + Pagination ==================================================== */
 
 window.JR_PRODUCTOS_DATA = window.JR_PRODUCTOS_DATA || [
   {
@@ -789,7 +785,7 @@ window.JR_PRODUCTOS_DATA = window.JR_PRODUCTOS_DATA || [
 onReady(function () {
 
   var grilla = document.getElementById('grillaProductos');
-  
+
   if (grilla) {
     var dataset = window.JR_PRODUCTOS_DATA || [];
     grilla.innerHTML = '';
@@ -825,61 +821,29 @@ onReady(function () {
     });
   }
 
-  var filtroBtns = document.querySelectorAll('.filtro-btn');
+  var filtroSelect = document.getElementById('filtroCategoria');
   var productosAll = document.querySelectorAll('.producto');
   var productosPorPagina = 20;
   var paginaActual = 1;
   var productosFiltrados = Array.from(productosAll);
 
-  if (filtroBtns.length > 0) {
-    filtroBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var categoria = this.getAttribute('data-filtro');
-
-        filtroBtns.forEach(function (b) { b.classList.remove('activo'); });
-        this.classList.add('activo');
-
-        productosFiltrados = [];
-        productosAll.forEach(function (producto) {
-          var catProducto = producto.getAttribute('data-categoria');
-          if (categoria === 'todos' || catProducto === categoria) {
-            productosFiltrados.push(producto);
-          }
-        });
-
-        paginaActual = 1;
-        renderPagina();
-
-  // Listener para el desplegable de Selección de Categoría
-  var filtroSelect = document.getElementById('filtroCategoriaSelect');
   if (filtroSelect) {
     filtroSelect.addEventListener('change', function () {
       var categoria = this.value;
-      var productosAll = document.querySelectorAll('.producto');
+
+      productosFiltrados = [];
+      productosAll.forEach(function (producto) {
+        var catProducto = producto.getAttribute('data-categoria');
+        if (categoria === 'todos' || catProducto === categoria) {
+          productosFiltrados.push(producto);
+        }
+      });
+
       paginaActual = 1;
-      
-      if (categoria === 'todos') {
-        productosFiltrados = Array.from(productosAll);
-      } else {
-        productosFiltrados = Array.from(productosAll).filter(function (prod) {
-          return prod.getAttribute('data-categoria') === categoria;
-        });
-      }
-      
-      var busquedaInput = document.getElementById('busquedaProductos');
-      if (busquedaInput && busquedaInput.value.trim() !== '') {
-        var query = busquedaInput.value.toLowerCase().trim();
-        productosFiltrados = productosFiltrados.filter(function (prod) {
-          return prod.getAttribute('data-nombre').indexOf(query) !== -1;
-        });
-      }
-      
       renderPagina();
     });
   }
 
-
-  // Grid / List View Toggle Handler
   var btnGrid = document.getElementById('btnVistaGrid');
   var btnList = document.getElementById('btnVistaList');
   var grillaEl = document.getElementById('grillaProductos');
@@ -894,10 +858,6 @@ onReady(function () {
       btnList.classList.add('activo');
       btnGrid.classList.remove('activo');
       grillaEl.classList.add('vista-lista');
-    });
-  }
-
-      });
     });
   }
 
@@ -925,9 +885,7 @@ onReady(function () {
       var btnLimpiar = navBusqueda ? navBusqueda.querySelector('.busqueda-limpiar') : null;
       if (btnLimpiar) btnLimpiar.style.display = termino.length > 0 ? 'block' : 'none';
 
-      filtroBtns.forEach(function (b) { b.classList.remove('activo'); });
-      var btnTodos = document.querySelector('.filtro-btn[data-filtro="todos"]');
-      if (btnTodos) btnTodos.classList.add('activo');
+      if (filtroSelect) filtroSelect.value = 'todos';
 
       productosFiltrados = [];
       productosAll.forEach(function (producto) {
@@ -1065,11 +1023,6 @@ onReady(function () {
 
 });
 
-
-/* --- counters.js --- */
-
-/* ==================================================== COUNTERS - Animated Counters ==================================================== */
-
 onReady(function () {
 
   var contadores = document.querySelectorAll('.contador-numero[data-objetivo]');
@@ -1096,7 +1049,7 @@ onReady(function () {
     function paso(timestamp) {
       if (!startTime) startTime = timestamp;
       var progreso = Math.min((timestamp - startTime) / duracion, 1);
-      // Easing: easeOutCubic
+
       var eased = 1 - Math.pow(1 - progreso, 3);
       var valorActual = Math.floor(eased * objetivo);
       el.innerHTML = valorActual.toLocaleString('es-PE') + '<span class="contador-simbolo">' + simbolo + '</span>';
@@ -1109,18 +1062,12 @@ onReady(function () {
 
 });
 
-
-/* --- canvas.js --- */
-
-/* ==================================================== CANVAS - Graph with High DPI ==================================================== */
-
 onReady(function () {
 
   var canvas = document.getElementById('graficoCategorias');
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    
-    // Set internal resolution
+
     canvas.width = 560;
     canvas.height = 300;
 
@@ -1209,15 +1156,10 @@ onReady(function () {
 
 });
 
-
-/* --- scroll.js --- */
-
-/* ==================================================== SCROLL - Scroll Reveal + Back to Top ==================================================== */
-
 onReady(function () {
 
   var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  
+
   revealElements.forEach(function (el) {
     el.classList.add('visible');
   });
@@ -1252,11 +1194,6 @@ onReady(function () {
   }
 
 });
-
-
-/* --- effects.js --- */
-
-/* ==================================================== EFFECTS - Newsletter + Parallax + Tooltips + Liquidacion Modal ==================================================== */
 
 onReady(function () {
 
@@ -1305,7 +1242,6 @@ onReady(function () {
     });
   });
 
-  // --- Persistence for Barra Anuncio ---
   var barraAnuncio = document.getElementById('barraAnuncio');
   var btnCerrarAnuncio = document.getElementById('barraAnuncioCerrar');
   if (barraAnuncio) {
@@ -1334,11 +1270,6 @@ onReady(function () {
   }
 
 });
-
-
-/* --- cart.js --- */
-
-/* ==================================================== CART - Complete Cart System + Toast + Max Limit ==================================================== */
 
 onReady(function () {
 
@@ -1685,55 +1616,3 @@ onReady(function () {
   }
 
 });
-
-
-  // Ensure modal X close button works 100% cleanly
-  var modalEl = document.getElementById('modalDetalleProducto');
-  if (modalEl) {
-    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        if (typeof bootstrap !== 'undefined') {
-          var bsModal = bootstrap.Modal.getInstance(modalEl);
-          if (bsModal) bsModal.hide();
-        }
-        modalEl.classList.remove('show');
-        modalEl.style.display = 'none';
-        document.body.classList.remove('modal-open');
-        var backdrop = document.querySelector('.modal-backdrop');
-        if (backdrop) backdrop.remove();
-      });
-    });
-  }
-
-
-  // Universal Robust Modal Close Handler (X button + Click Outside Backdrop)
-  var modalEl = document.getElementById('modalDetalleProducto');
-  if (modalEl) {
-    function cerrarModalDetalle() {
-      if (typeof bootstrap !== 'undefined') {
-        var bsModal = bootstrap.Modal.getInstance(modalEl);
-        if (bsModal) {
-          try { bsModal.hide(); } catch (e) {}
-        }
-      }
-      modalEl.classList.remove('show');
-      modalEl.style.display = 'none';
-      document.body.classList.remove('modal-open');
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-      var backdrops = document.querySelectorAll('.modal-backdrop');
-      backdrops.forEach(function (b) { b.remove(); });
-    }
-
-    modalEl.querySelectorAll('[data-bs-dismiss="modal"], .btn-close').forEach(function (btn) {
-      btn.addEventListener('click', cerrarModalDetalle);
-    });
-
-    modalEl.addEventListener('click', function (e) {
-      if (e.target === modalEl) {
-        cerrarModalDetalle();
-      }
-    });
-  }
-
-
